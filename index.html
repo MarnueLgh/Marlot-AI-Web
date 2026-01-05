@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marlot AI - Agencia de Inteligencia Artificial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#servicios" class="nav-link">SERVICIOS</a>
+                <a href="#nosotros" class="nav-link">NOSOTROS</a>
+                <a href="#casos" class="nav-link">CASOS</a>
+            </div>
+            <div class="nav-logo">
+                <a href="#">
+                    <img src="assets/images/logo-marlot.png" alt="Marlot AI" class="logo-img">
+                </a>
+            </div>
+            <div class="nav-right">
+                <a href="#contacto" class="nav-link">CONTACTO</a>
+                <a href="#blog" class="nav-link">BLOG</a>
+                <a href="#" class="nav-link nav-cta">AGENDA UNA LLAMADA</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Inteligencia artificial<br>para tu negocio.</h1>
+            <a href="#servicios" class="hero-btn">DESCUBRE NUESTROS SERVICIOS</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-image service-automation">
+                    <span class="service-tag">más popular</span>
+                    <h2 class="service-title-large">automate</h2>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="service-info">
+                    <div class="service-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">(127)</span>
+                    </div>
+                    <h3 class="service-name">AUTOMATIZACIÓN IA</h3>
+                    <p class="service-price">Desde $2,500/mes</p>
+                    <p class="service-desc">Automatiza procesos repetitivos</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-image service-chatbots">
+                    <span class="service-tag tag-exclusive">exclusivo</span>
+                    <h2 class="service-title-large">chat</h2>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="service-info">
+                    <div class="service-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">(89)</span>
+                    </div>
+                    <h3 class="service-name">CHATBOTS INTELIGENTES</h3>
+                    <p class="service-price">Desde $1,800/mes</p>
+                    <p class="service-desc">Atención al cliente 24/7</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-image service-analytics">
+                    <h2 class="service-title-large">data</h2>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="service-info">
+                    <div class="service-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">(234)</span>
+                    </div>
+                    <h3 class="service-name">ANÁLISIS PREDICTIVO</h3>
+                    <p class="service-price">Desde $3,200/mes</p>
+                    <p class="service-desc">Decisiones basadas en datos</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-image service-consulting">
+                    <h2 class="service-title-large">consult</h2>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="service-info">
+                    <div class="service-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-count">(156)</span>
+                    </div>
+                    <h3 class="service-name">CONSULTORÍA IA</h3>
+                    <p class="service-price">Desde $500/hora</p>
+                    <p class="service-desc">Estrategia de implementación</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Section - Two Columns -->
+    <section class="value-section" id="nosotros">
+        <div class="value-container">
+            <div class="value-content">
+                <h2 class="value-title">marlot connection</h2>
+                <p class="value-description">
+                    Conectamos la inteligencia artificial con tu negocio de manera 
+                    effortless. Nuestras soluciones se integran perfectamente con 
+                    tus sistemas existentes, potenciando cada aspecto de tu operación.
+                </p>
+                <p class="value-description">
+                    Desde automatización de procesos hasta análisis predictivo, 
+                    te acompañamos en cada paso de tu transformación digital.
+                </p>
+                <a href="#contacto" class="value-btn">CONOCE MÁS</a>
+            </div>
+            <div class="value-image">
+                <div class="value-image-placeholder">
+                    <div class="ai-visual">
+                        <div class="neural-network">
+                            <div class="node node-1"></div>
+                            <div class="node node-2"></div>
+                            <div class="node node-3"></div>
+                            <div class="node node-4"></div>
+                            <div class="node node-5"></div>
+                            <svg class="connections" viewBox="0 0 300 300">
+                                <line x1="150" y1="50" x2="50" y2="150" stroke="#F25C69" stroke-width="1"/>
+                                <line x1="150" y1="50" x2="250" y2="150" stroke="#F25C69" stroke-width="1"/>
+                                <line x1="50" y1="150" x2="100" y2="250" stroke="#F25C69" stroke-width="1"/>
+                                <line x1="250" y1="150" x2="200" y2="250" stroke="#F25C69" stroke-width="1"/>
+                                <line x1="100" y1="250" x2="200" y2="250" stroke="#F25C69" stroke-width="1"/>
+                            </svg>
+                        </div>
+                        <span class="marlot-badge">marlot</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-number">150+</span>
+                <span class="stat-label">Proyectos completados</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">Clientes satisfechos</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">40%</span>
+                <span class="stat-label">Reducción de costos promedio</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Soporte disponible</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Second Value Section -->
+    <section class="value-section value-section-alt" id="casos">
+        <div class="value-container value-container-reverse">
+            <div class="value-image">
+                <div class="value-image-placeholder case-study-image">
+                    <div class="case-study-visual">
+                        <div class="chart-bars">
+                            <div class="bar bar-1"></div>
+                            <div class="bar bar-2"></div>
+                            <div class="bar bar-3"></div>
+                            <div class="bar bar-4"></div>
+                        </div>
+                        <span class="growth-label">+127%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="value-content">
+                <div class="case-rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-count">(234)</span>
+                </div>
+                <h3 class="case-title">CASO DE ÉXITO</h3>
+                <p class="case-subtitle">Transformación digital completa</p>
+                <h2 class="value-title">Resultados reales</h2>
+                <p class="value-description">
+                    Ayudamos a una empresa de e-commerce a aumentar sus ventas 
+                    en un 127% mediante chatbots inteligentes y análisis predictivo 
+                    de comportamiento del cliente.
+                </p>
+                <a href="#" class="value-btn">VER CASO COMPLETO</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Large Logo Section -->
+    <section class="logo-section">
+        <div class="large-logo">marlot</div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <div class="footer-top">
+            <div class="footer-newsletter">
+                <h3>Únete al futuro con <span class="highlight">marlot</span></h3>
+                <p class="newsletter-desc">Recibe insights de IA, casos de éxito y contenido exclusivo.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email Address" class="newsletter-input">
+                    <button type="submit" class="newsletter-btn">SUSCRIBIRSE</button>
+                </form>
+                <p class="privacy-note">Al suscribirte, aceptas nuestra <a href="#">Política de Privacidad</a>*.</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>NAVEGAR</h4>
+                    <ul>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#nosotros">Nuestra Historia</a></li>
+                        <li><a href="#casos">Casos de Éxito</a></li>
+                        <li><a href="#">Impacto</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>SOCIAL</h4>
+                    <ul class="social-icons">
+                        <li><a href="#" aria-label="Instagram"><img src="assets/images/icons/instagram_icon.png" alt="Instagram"></a></li>
+                        <li><a href="#" aria-label="Youtube"><img src="assets/images/icons/youtube_icon.png" alt="Youtube"></a></li>
+                        <li><a href="#" aria-label="TikTok"><img src="assets/images/icons/tiktok_icon.png" alt="TikTok"></a></li>
+                        <li><a href="#" aria-label="LinkedIn"><img src="assets/images/icons/linkedin_icon.png" alt="LinkedIn"></a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>OFICIAL</h4>
+                    <ul>
+                        <li><a href="#">Privacidad</a></li>
+                        <li><a href="#">Términos</a></li>
+                        <li><a href="#">Accesibilidad</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>SOPORTE</h4>
+                    <p class="support-text">L-V 9am - 6pm CST.</p>
+                    <p class="support-text">Chatbot 24/7</p>
+                    <p class="support-text">Escríbenos en cualquier momento.</p>
+                    <a href="mailto:support@marlot.ai" class="support-email">support@marlot.ai</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© marlot 2026</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
