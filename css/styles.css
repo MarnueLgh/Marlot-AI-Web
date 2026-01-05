@@ -52,28 +52,40 @@ ul {
 }
 
 /* =============================================
-   Navigation
+   Navigation - Floating Navbar
    ============================================= */
 .navbar {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: transparent;
-    padding: 20px 40px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 1400px;
+    background-color: rgba(245, 243, 240, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 16px 40px;
     z-index: 1000;
     transition: all var(--transition-medium);
-    transform: translateY(0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
 }
 
 .navbar.hidden {
-    transform: translateY(-150%);
+    transform: translateX(-50%) translateY(-150%);
 }
 
 .navbar.scrolled {
-    background-color: var(--color-bg);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
-    top: 0;
+    background-color: rgba(245, 243, 240, 0.95);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    top: 20px;
+}
+
+/* Navbar en hero (fondo oscuro) - transparente */
+.navbar:not(.scrolled) {
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
 
 .nav-container {
