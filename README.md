@@ -4,7 +4,9 @@
 
 ## 🚀 Descripción
 
-Landing page moderna y elegante para una agencia de servicios de IA. Diseño inspirado en la estética minimalista de Rhode Skin, con animaciones suaves y una experiencia de usuario premium.
+- Marlot AI busca ofrecer servicios de inteligencia artificial personalizados para pequeñas y medianas empresas.
+- El objetivo es permitir que empresas con recursos limitados puedan aprovechar la IA para optimizar sus operaciones.
+- Landing page moderna y elegante para una agencia de servicios de IA. Diseño inspirado en la estética minimalista de Rhode Skin, con animaciones suaves y una experiencia de usuario premium.
 
 ## ✨ Características
 
@@ -27,8 +29,9 @@ Landing page moderna y elegante para una agencia de servicios de IA. Diseño ins
 ```
 Marlot AI Web/
 ├── index.html
-├── styles.css
 ├── script.js
+├── css/
+│   └── styles.css
 ├── assets/
 │   ├── images/
 │   │   ├── logo-marlot.png
