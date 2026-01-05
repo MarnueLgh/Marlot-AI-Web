@@ -22,6 +22,17 @@
     --transition-slow: 0.5s ease;
 }
 
+/* Dark Mode Variables */
+[data-theme="dark"] {
+    --color-bg: #1a1a1a;
+    --color-bg-alt: #252525;
+    --color-text: #b0b0b0;
+    --color-text-dark: #e0e0e0;
+    --color-text-light: #808080;
+    --color-white: #FFFFFF;
+    --color-border: #3a3a3a;
+}
+
 /* Reset & Base */
 * {
     margin: 0;
@@ -576,22 +587,33 @@ ul {
 }
 
 /* =============================================
-   Large Logo Section
+   Large Logo Section - Oversized Typography
    ============================================= */
 .logo-section {
-    padding: 60px 40px;
+    padding: 0;
+    margin: 0;
     background-color: var(--color-bg);
     overflow: hidden;
+    width: 100%;
 }
 
 .large-logo {
-    font-size: clamp(100px, 20vw, 280px);
-    font-weight: 700;
-    color: var(--color-text);
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
     text-align: center;
-    letter-spacing: -8px;
-    opacity: 0.9;
-    line-height: 0.85;
+}
+
+.large-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%) brightness(0.5) contrast(1.1);
+    opacity: 0.7;
+    margin: 0;
+    padding: 0;
 }
 
 /* =============================================
@@ -639,7 +661,7 @@ ul {
     flex: 1;
     padding: 14px 20px;
     border: 1px solid var(--color-border);
-    border-radius: 0;
+    border-radius: 30px;
     background-color: transparent;
     font-family: var(--font-primary);
     font-size: 14px;
@@ -659,6 +681,7 @@ ul {
     padding: 14px 28px;
     background-color: transparent;
     border: 1px solid var(--color-text-dark);
+    border-radius: 30px;
     font-family: var(--font-primary);
     font-size: 11px;
     font-weight: 500;
@@ -689,11 +712,12 @@ ul {
 }
 
 .footer-column h4 {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: var(--color-text);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--color-text-dark);
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .footer-column ul li {
@@ -758,14 +782,15 @@ ul {
 
 .footer-bottom {
     text-align: center;
-    padding-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 10px;
     border-top: 1px solid var(--color-border);
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .footer-bottom p {
-    font-size: 12px;
+    font-size: 11px;
     color: var(--color-text-light);
 }
 
@@ -904,6 +929,151 @@ ul {
 /* Smooth scroll offset for fixed nav */
 section[id] {
     scroll-margin-top: 100px;
+}
+
+/* =============================================
+   Floating Side Menu - Liquid Glass Style
+   ============================================= */
+.side-menu {
+    position: fixed;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 8px;
+    background: rgba(120, 120, 120, 0.25);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.side-menu-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(200, 200, 200, 0.3);
+    backdrop-filter: blur(10px);
+    color: var(--color-text-dark);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+
+.side-menu-btn:hover {
+    transform: scale(1.08);
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.side-menu-btn:active {
+    transform: scale(0.95);
+    background: rgba(180, 180, 180, 0.4);
+}
+
+.side-menu-btn svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.4s ease;
+}
+
+.side-menu-btn:hover svg {
+    transform: rotate(12deg);
+}
+
+/* Dark mode button icons */
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon {
+    position: absolute;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.theme-toggle .icon-moon {
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+[data-theme="dark"] .theme-toggle .icon-sun {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+[data-theme="dark"] .theme-toggle .icon-moon {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+/* Dark mode specific adjustments */
+[data-theme="dark"] .navbar:not(.scrolled) {
+    background-color: rgba(26, 26, 26, 0.3);
+}
+
+[data-theme="dark"] .navbar.scrolled {
+    background-color: rgba(26, 26, 26, 0.95);
+}
+
+[data-theme="dark"] .side-menu {
+    background: rgba(40, 40, 40, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .side-menu-btn {
+    background: rgba(80, 80, 80, 0.4);
+    color: var(--color-text-dark);
+    box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .side-menu-btn:hover {
+    background: rgba(100, 100, 100, 0.5);
+}
+
+[data-theme="dark"] .large-logo img {
+    filter: grayscale(100%) brightness(0.35) contrast(1.2);
+    opacity: 0.6;
+}
+
+[data-theme="dark"] .social-icons a {
+    background-color: var(--color-bg-alt);
+}
+
+/* Smooth transition for all elements */
+body,
+.navbar,
+.hero,
+.services,
+.value-section,
+.stats-section,
+.logo-section,
+.footer,
+.service-card,
+.service-image,
+.value-image-placeholder,
+.newsletter-input,
+.newsletter-btn,
+.side-menu-btn {
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
 }
 
 /* =============================================

@@ -20,7 +20,7 @@
             </div>
             <div class="nav-logo">
                 <a href="#">
-                    <img src="assets/images/logo-marlot.png" alt="Marlot AI" class="logo-img">
+                    <img src="assets/images/logo-marlot3.svg" alt="Marlot AI" class="logo-img">
                 </a>
             </div>
             <div class="nav-right">
@@ -225,17 +225,17 @@
 
     <!-- Large Logo Section -->
     <section class="logo-section">
-        <div class="large-logo">marlot</div>
+        <div class="large-logo"><img src="assets/images/footer-logo-marlot.svg" alt="Marlot AI"></div>
     </section>
 
     <!-- Footer -->
     <footer class="footer" id="contacto">
         <div class="footer-top">
             <div class="footer-newsletter">
-                <h3>Únete al futuro con <span class="highlight">marlot</span></h3>
+                <h3>Rediseña tu futuro con <span class="highlight">marlot</span></h3>
                 <p class="newsletter-desc">Recibe insights de IA, casos de éxito y contenido exclusivo.</p>
                 <form class="newsletter-form">
-                    <input type="email" placeholder="Email Address" class="newsletter-input">
+                    <input type="email" placeholder="Email" class="newsletter-input">
                     <button type="submit" class="newsletter-btn">SUSCRIBIRSE</button>
                 </form>
                 <p class="privacy-note">Al suscribirte, aceptas nuestra <a href="#">Política de Privacidad</a>*.</p>
@@ -291,6 +291,31 @@
     <!-- Chatbot Embed -->
     <div id="chatbot-container">
         <!-- Pega aquí el código embed de tu chatbot -->
+    </div>
+
+    <!-- Side Menu - Dark Mode & Chatbot -->
+    <div class="side-menu">
+        <button class="side-menu-btn theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+        </button>
+        <button class="side-menu-btn chatbot-btn" id="chatbotBtn" aria-label="Abrir chatbot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+        </button>
     </div>
 
     <script src="script.js"></script>
