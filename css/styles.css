@@ -227,7 +227,7 @@ ul {
 }
 
 /* =============================================
-   Services Section
+   Services Section - Capsule Cards
    ============================================= */
 .services {
     padding: 80px 40px;
@@ -237,79 +237,72 @@ ul {
 .services-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 16px;
     max-width: 1400px;
     margin: 0 auto;
 }
 
 .service-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
     background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 50px;
+    padding: 10px 16px 10px 10px;
     cursor: pointer;
-    transition: transform var(--transition-fast);
+    transition: all var(--transition-fast);
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-color: transparent;
 }
 
 .service-image {
     position: relative;
-    height: 320px;
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
     background-color: var(--color-bg-alt);
-    border-radius: 24px;
+    border-radius: 50%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 30px;
+    padding: 0;
     overflow: hidden;
 }
 
 .service-automation {
-    background: linear-gradient(145deg, #E8E4DF 0%, #D8D4CF 100%);
+    background: linear-gradient(145deg, #FFF3E0 0%, #FFE0B2 100%);
 }
 
 .service-chatbots {
-    background: linear-gradient(145deg, #E5E8E4 0%, #D5D8D4 100%);
+    background: linear-gradient(145deg, #E8F5E9 0%, #C8E6C9 100%);
 }
 
 .service-analytics {
-    background: linear-gradient(145deg, #E4E6E8 0%, #D4D6D8 100%);
+    background: linear-gradient(145deg, #E3F2FD 0%, #BBDEFB 100%);
 }
 
 .service-consulting {
-    background: linear-gradient(145deg, #E8E6E4 0%, #D8D6D4 100%);
+    background: linear-gradient(145deg, #FFF8E1 0%, #FFECB3 100%);
 }
 
 .service-tag {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    font-size: 10px;
-    font-weight: 500;
-    padding: 6px 12px;
-    border-radius: 20px;
-    letter-spacing: 0.5px;
-}
-
-.tag-exclusive {
-    background-color: var(--color-text);
+    display: none;
 }
 
 .service-title-large {
-    font-size: 48px;
-    font-weight: 300;
-    color: var(--color-text);
-    letter-spacing: -1px;
-    margin-bottom: 20px;
+    display: none;
 }
 
 .service-icon {
-    width: 80px;
-    height: 80px;
-    color: var(--color-text-light);
+    width: 28px;
+    height: 28px;
+    color: var(--color-text-dark);
 }
 
 .service-icon svg {
@@ -318,14 +311,13 @@ ul {
 }
 
 .service-info {
-    padding: 20px 5px;
+    padding: 0;
+    flex: 1;
+    min-width: 0;
 }
 
 .service-rating {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 8px;
+    display: none;
 }
 
 .stars {
@@ -340,22 +332,26 @@ ul {
 }
 
 .service-name {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
-    letter-spacing: 0.5px;
+    letter-spacing: 0;
     color: var(--color-text-dark);
-    margin-bottom: 4px;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .service-price {
-    font-size: 14px;
-    color: var(--color-text-dark);
-    margin-bottom: 4px;
+    display: none;
 }
 
 .service-desc {
-    font-size: 13px;
+    font-size: 12px;
     color: var(--color-text-light);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* =============================================
@@ -805,6 +801,10 @@ ul {
     .stats-container {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 992px) {
@@ -847,8 +847,33 @@ ul {
     }
     
     .services-container {
-        grid-template-columns: 1fr;
-        max-width: 400px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        max-width: 100%;
+    }
+    
+    .service-card {
+        padding: 8px 12px 8px 8px;
+        gap: 10px;
+    }
+    
+    .service-image {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+    }
+    
+    .service-icon {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .service-name {
+        font-size: 12px;
+    }
+    
+    .service-desc {
+        font-size: 11px;
     }
     
     .value-section {
@@ -936,18 +961,18 @@ section[id] {
    ============================================= */
 .side-menu {
     position: fixed;
-    left: 16px;
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1000;
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    padding: 10px 8px;
+    gap: 4px;
+    padding: 8px 6px;
     background: rgba(120, 120, 120, 0.25);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-radius: 40px;
+    border-radius: 30px;
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 
         0 8px 32px rgba(0, 0, 0, 0.12),
@@ -956,8 +981,8 @@ section[id] {
 }
 
 .side-menu-btn {
-    width: 36px;
-    height: 36px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     border: none;
     background: rgba(200, 200, 200, 0.3);
@@ -988,8 +1013,8 @@ section[id] {
 }
 
 .side-menu-btn svg {
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
     transition: transform 0.4s ease;
 }
 
