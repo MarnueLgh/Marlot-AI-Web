@@ -5,62 +5,36 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // =============================================
-    // Scroll-up Reveal Navigation
+    // Scroll-up Reveal Navigation (Simple)
     // =============================================
     const navbar = document.getElementById('navbar');
-    let lastScrollTop = 0;
-    let scrollThreshold = 15; // pixels needed to scroll up to reveal nav
-    let accumulatedScrollUp = 0;
-    let isNavHidden = false;
+    let lastScrollY = window.scrollY;
     
-    function handleNavbarScroll() {
-        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
         
-        // Add scrolled class when past hero
-        if (currentScroll > 100) {
+        // Cambiar estilo cuando pasamos el hero
+        if (currentScrollY > 100) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
         
-        // Only apply hide/show logic after scrolling past the initial view
-        if (currentScroll > 200) {
-            if (currentScroll > lastScrollTop) {
-                // Scrolling down
-                accumulatedScrollUp = 0;
-                if (!isNavHidden) {
-                    navbar.classList.add('hidden');
-                    isNavHidden = true;
-                }
+        // Solo aplicar hide/show después de pasar el hero
+        if (currentScrollY > 150) {
+            if (currentScrollY > lastScrollY) {
+                // Bajando: Escondemos
+                navbar.classList.add('hidden');
             } else {
-                // Scrolling up
-                accumulatedScrollUp += (lastScrollTop - currentScroll);
-                
-                if (accumulatedScrollUp >= scrollThreshold && isNavHidden) {
-                    navbar.classList.remove('hidden');
-                    isNavHidden = false;
-                }
+                // Subiendo: Mostramos
+                navbar.classList.remove('hidden');
             }
         } else {
-            // Near the top, always show navbar
+            // Cerca del top, siempre visible
             navbar.classList.remove('hidden');
-            isNavHidden = false;
-            accumulatedScrollUp = 0;
         }
         
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-    }
-    
-    // Throttle scroll events for better performance
-    let ticking = false;
-    window.addEventListener('scroll', function() {
-        if (!ticking) {
-            window.requestAnimationFrame(function() {
-                handleNavbarScroll();
-                ticking = false;
-            });
-            ticking = true;
-        }
+        lastScrollY = currentScrollY;
     });
     
     // =============================================

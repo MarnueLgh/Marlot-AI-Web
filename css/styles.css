@@ -63,7 +63,7 @@ ul {
 }
 
 /* =============================================
-   Navigation - Floating Navbar
+   Navigation - Floating Navbar (Scroll-up Reveal)
    ============================================= */
 .navbar {
     position: fixed;
@@ -82,6 +82,7 @@ ul {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
 }
 
+/* Scroll Down = Navbar se desliza hacia arriba */
 .navbar.hidden {
     transform: translateX(-50%) translateY(-150%);
 }
@@ -961,14 +962,15 @@ section[id] {
    ============================================= */
 .side-menu {
     position: fixed;
-    left: 10px;
+    left: 12px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1000;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 4px;
-    padding: 8px 6px;
+    padding: 10px 7px;
     background: rgba(120, 120, 120, 0.25);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -1013,9 +1015,10 @@ section[id] {
 }
 
 .side-menu-btn svg {
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
     transition: transform 0.4s ease;
+    stroke-width: 2.5;
 }
 
 .side-menu-btn:hover svg {
@@ -1083,9 +1086,8 @@ section[id] {
     background-color: var(--color-bg-alt);
 }
 
-/* Smooth transition for all elements */
+/* Smooth transition for all elements (Dark Mode) */
 body,
-.navbar,
 .hero,
 .services,
 .value-section,
