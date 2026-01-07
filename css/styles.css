@@ -168,8 +168,29 @@ ul {
     display: flex;
     align-items: flex-end;
     padding: 80px 60px;
+    /* FONDO ORIGINAL (comentado para poder revertir):
     background: linear-gradient(135deg, #2D2D2D 0%, #1a1a1a 100%);
+    */
+    background: linear-gradient(135deg, #2D2D2D 0%, #1a1a1a 100%); /* Fondo de respaldo */
     overflow: hidden;
+}
+
+/* Imagen de fondo del hero */
+.hero-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.hero-background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .hero::before {
@@ -179,10 +200,16 @@ ul {
     left: 0;
     right: 0;
     bottom: 0;
+    /* EFECTOS ORIGINALES (comentado para poder revertir):
+    background: 
+        radial-gradient(circle at 30% 40%, rgba(242, 92, 105, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 60%, rgba(242, 92, 105, 0.05) 0%, transparent 40%);
+    */
     background: 
         radial-gradient(circle at 30% 40%, rgba(242, 92, 105, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 70% 60%, rgba(242, 92, 105, 0.05) 0%, transparent 40%);
     pointer-events: none;
+    z-index: 1;
 }
 
 .hero-overlay {
@@ -191,8 +218,12 @@ ul {
     left: 0;
     right: 0;
     bottom: 0;
+    /* OVERLAY ORIGINAL (comentado para poder revertir):
     background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 50%);
+    */
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%); /* Ajustado para mejor contraste con imagen */
     pointer-events: none;
+    z-index: 1;
 }
 
 .hero-content {
@@ -289,7 +320,7 @@ ul {
 }
 
 .service-consulting {
-    background: linear-gradient(145deg, #FFF8E1 0%, #FFECB3 100%);
+    background: linear-gradient(145deg, #ffe1ed 0%, #ffb3dc 100%);
 }
 
 .service-tag {
@@ -582,19 +613,19 @@ ul {
 
 /* Card Colors */
 .bento-mint {
-    background: linear-gradient(135deg, #a8e6cf 0%, #88d8b0 100%);
+    background: linear-gradient(135deg, #88d8b0 0%, #c9f5e5 100%);
 }
 
 .bento-dark {
-    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    background: linear-gradient(135deg, #c97474 0%, #d78a8a 100%);
 }
 
 .bento-neutral {
-    background: linear-gradient(135deg, #e8e8e8 0%, #d4d4d4 100%);
+    background: linear-gradient(135deg, #e09bbf 0%, #e8b4ce 100%);
 }
 
 .bento-lavender {
-    background: linear-gradient(135deg, #c9b8e8 0%, #b8a4d9 100%);
+    background: linear-gradient(135deg, #a792ce 0%, #ccb7ef 100%);
 }
 
 /* Content Styles */
@@ -624,11 +655,11 @@ ul {
 }
 
 .bento-number-light {
-    color: #ffffff;
+    color: #1a1a1a;
 }
 
 .bento-number-muted {
-    color: #6b6b6b;
+    color: #1a1a1a;
     font-size: 72px;
 }
 
@@ -642,7 +673,7 @@ ul {
 }
 
 .bento-label-light {
-    color: rgba(255, 255, 255, 0.8);
+    color: #3d3d3d;
 }
 
 /* Progress Ring (70%) */
@@ -753,19 +784,19 @@ ul {
 
 /* Dark Mode Bento */
 [data-theme="dark"] .bento-mint {
-    background: linear-gradient(135deg, #2d5a4a 0%, #1e4035 100%);
+    background: linear-gradient(135deg, #39715d 0%, #59bb9c 100%);
 }
 
 [data-theme="dark"] .bento-dark {
-    background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
+    background: linear-gradient(135deg, #873b3b 0%, #ba5757 100%);
 }
 
 [data-theme="dark"] .bento-neutral {
-    background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
+    background: linear-gradient(135deg, #9c3f6f 0%, #cb4d8c 100%);
 }
 
 [data-theme="dark"] .bento-lavender {
-    background: linear-gradient(135deg, #4a3d5c 0%, #3d3250 100%);
+    background: linear-gradient(135deg, #5a378b 0%, #734bb8 100%);
 }
 
 [data-theme="dark"] .bento-number {
@@ -773,7 +804,7 @@ ul {
 }
 
 [data-theme="dark"] .bento-number-muted {
-    color: #808080;
+    color: #ffffff;
 }
 
 [data-theme="dark"] .bento-label {
