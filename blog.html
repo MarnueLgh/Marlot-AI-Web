@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Marlot AI | Insights de Inteligencia Artificial</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-blog" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html#servicios" class="nav-link">SERVICIOS</a>
+                <a href="index.html#nosotros" class="nav-link">NOSOTROS</a>
+                <a href="index.html#casos" class="nav-link">CASOS</a>
+            </div>
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="assets/images/logo-marlot3.svg" alt="Marlot AI" class="logo-img">
+                </a>
+            </div>
+            <div class="nav-right">
+                <a href="index.html#contacto" class="nav-link">CONTACTO</a>
+                <a href="blog.html" class="nav-link nav-active">BLOG</a>
+                <a href="#" class="nav-link nav-cta">AGENDA UNA LLAMADA</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="blog-hero-content">
+            <span class="blog-hero-tag">BLOG</span>
+            <h1 class="blog-hero-title">Descubre el futuro<br>de la IA</h1>
+            <p class="blog-hero-subtitle">Insights, tendencias y guías prácticas para transformar tu negocio con inteligencia artificial.</p>
+            <a href="#articles" class="blog-hero-cta">
+                <span>Explorar artículos</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                </svg>
+            </a>
+        </div>
+        <div class="blog-hero-visual">
+            <div class="floating-cards">
+                <div class="float-card float-card-1">
+                    <span class="float-icon">🤖</span>
+                </div>
+                <div class="float-card float-card-2">
+                    <span class="float-icon">📊</span>
+                </div>
+                <div class="float-card float-card-3">
+                    <span class="float-icon">⚡</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Articles Section -->
+    <section class="blog-articles" id="articles">
+        <div class="blog-articles-header">
+            <h2 class="section-title">Últimos artículos</h2>
+            <div class="blog-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="ia">IA</button>
+                <button class="filter-btn" data-filter="automation">Automatización</button>
+                <button class="filter-btn" data-filter="tips">Tips</button>
+            </div>
+        </div>
+
+        <div class="blog-grid">
+            <!-- Featured Article -->
+            <article class="blog-card blog-card-featured" data-category="ia">
+                <div class="blog-card-image">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop" alt="IA Generativa">
+                    <span class="blog-card-tag">DESTACADO</span>
+                </div>
+                <div class="blog-card-content">
+                    <span class="blog-card-category">Inteligencia Artificial</span>
+                    <h3 class="blog-card-title">El impacto de la IA generativa en las PyMEs</h3>
+                    <p class="blog-card-excerpt">Descubre cómo las pequeñas empresas pueden aprovechar herramientas de IA generativa para competir con grandes corporaciones.</p>
+                    <div class="blog-card-meta">
+                        <span class="blog-card-date">Ene 8, 2026</span>
+                        <span class="blog-card-read">5 min lectura</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Regular Articles -->
+            <article class="blog-card" data-category="automation">
+                <div class="blog-card-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Automatización">
+                    <span class="blog-card-tag tag-new">NUEVO</span>
+                </div>
+                <div class="blog-card-content">
+                    <span class="blog-card-category">Automatización</span>
+                    <h3 class="blog-card-title">5 procesos que deberías automatizar hoy</h3>
+                    <div class="blog-card-meta">
+                        <span class="blog-card-date">Ene 6, 2026</span>
+                        <span class="blog-card-read">3 min</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="tips">
+                <div class="blog-card-image">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Productividad">
+                </div>
+                <div class="blog-card-content">
+                    <span class="blog-card-category">Tips</span>
+                    <h3 class="blog-card-title">Cómo elegir el chatbot correcto para tu negocio</h3>
+                    <div class="blog-card-meta">
+                        <span class="blog-card-date">Ene 4, 2026</span>
+                        <span class="blog-card-read">4 min</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="ia">
+                <div class="blog-card-image">
+                    <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=600&h=400&fit=crop" alt="Machine Learning">
+                </div>
+                <div class="blog-card-content">
+                    <span class="blog-card-category">IA</span>
+                    <h3 class="blog-card-title">Machine Learning explicado para no técnicos</h3>
+                    <div class="blog-card-meta">
+                        <span class="blog-card-date">Ene 2, 2026</span>
+                        <span class="blog-card-read">6 min</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="automation">
+                <div class="blog-card-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="Equipo trabajando">
+                </div>
+                <div class="blog-card-content">
+                    <span class="blog-card-category">Automatización</span>
+                    <h3 class="blog-card-title">Caso real: 70% menos tiempo en tareas repetitivas</h3>
+                    <div class="blog-card-meta">
+                        <span class="blog-card-date">Dic 28, 2025</span>
+                        <span class="blog-card-read">4 min</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="tips">
+                <div class="blog-card-image">
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=400&fit=crop" alt="Estrategia">
+                </div>
+                <div class="blog-card-content">
+                    <span class="blog-card-category">Tips</span>
+                    <h3 class="blog-card-title">Guía: Prepara tu empresa para la era de la IA</h3>
+                    <div class="blog-card-meta">
+                        <span class="blog-card-date">Dic 22, 2025</span>
+                        <span class="blog-card-read">8 min</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="blog-load-more">
+            <button class="load-more-btn">Cargar más artículos</button>
+        </div>
+    </section>
+
+    <!-- Zoom Parallax Gallery Section -->
+    <section class="parallax-section">
+        <div class="parallax-intro">
+            <h2 class="parallax-title">Visualiza el futuro</h2>
+            <p class="parallax-subtitle">Explora cómo la IA está transformando industrias</p>
+        </div>
+
+        <div class="zoom-parallax-container" id="zoomParallax">
+            <div class="parallax-sticky">
+                <!-- Center image (main focus) -->
+                <div class="parallax-image-wrapper" data-scale="4">
+                    <div class="parallax-image parallax-center">
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop" alt="Robot AI">
+                    </div>
+                </div>
+                <!-- Top left - Gradient card (Marlot brand) -->
+                <div class="parallax-image-wrapper" data-scale="5" data-position="top-left">
+                    <div class="parallax-image parallax-gradient">
+                        <div class="gradient-content"></div>
+                    </div>
+                </div>
+                <!-- Top right - City/Business -->
+                <div class="parallax-image-wrapper" data-scale="5.5" data-position="top-right">
+                    <div class="parallax-image">
+                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=500&fit=crop" alt="City business">
+                    </div>
+                </div>
+                <!-- Center - Architecture -->
+                <div class="parallax-image-wrapper" data-scale="4.5" data-position="center-left">
+                    <div class="parallax-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop" alt="Modern architecture">
+                    </div>
+                </div>
+                <!-- Center right - Mountains -->
+                <div class="parallax-image-wrapper" data-scale="6" data-position="center-right">
+                    <div class="parallax-image">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop" alt="Mountains">
+                    </div>
+                </div>
+                <!-- Bottom left - Lake -->
+                <div class="parallax-image-wrapper" data-scale="5" data-position="bottom-left">
+                    <div class="parallax-image">
+                        <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=600&h=400&fit=crop" alt="Lake dock">
+                    </div>
+                </div>
+                <!-- Bottom right - Forest -->
+                <div class="parallax-image-wrapper" data-scale="7" data-position="bottom-right">
+                    <div class="parallax-image">
+                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop" alt="Forest">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="blog-cta-section">
+        <div class="blog-cta-content">
+            <h2 class="blog-cta-title">¿Listo para transformar tu negocio?</h2>
+            <p class="blog-cta-text">Agenda una llamada gratuita y descubre cómo la IA puede ayudarte.</p>
+            <a href="index.html#contacto" class="blog-cta-btn">Agendar llamada</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-newsletter">
+                <h3>Rediseña tu futuro con <span class="highlight">marlot</span></h3>
+                <p class="newsletter-desc">Recibe tips de automatización y novedades sobre nuestros servicios.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email" class="newsletter-input">
+                    <button type="submit" class="newsletter-btn">SUSCRIBIRSE</button>
+                </form>
+                <p class="privacy-note">Al suscribirte, aceptas nuestra <a href="#">Política de Privacidad</a>*.</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>NAVEGAR</h4>
+                    <ul>
+                        <li><a href="index.html#servicios">Servicios</a></li>
+                        <li><a href="index.html#nosotros">Nuestra Historia</a></li>
+                        <li><a href="index.html#casos">Casos de Éxito</a></li>
+                        <li><a href="#">Impacto</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>SOCIAL</h4>
+                    <ul class="social-icons">
+                        <li><a href="#" aria-label="Instagram"><img src="assets/images/icons/instagram_icon.png" alt="Instagram"></a></li>
+                        <li><a href="#" aria-label="Youtube"><img src="assets/images/icons/youtube_icon.png" alt="Youtube"></a></li>
+                        <li><a href="#" aria-label="TikTok"><img src="assets/images/icons/tiktok_icon.png" alt="TikTok"></a></li>
+                        <li><a href="#" aria-label="LinkedIn"><img src="assets/images/icons/linkedin_icon.png" alt="LinkedIn"></a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>OFICIAL</h4>
+                    <ul>
+                        <li><a href="#">Privacidad</a></li>
+                        <li><a href="#">Términos</a></li>
+                        <li><a href="#">Accesibilidad</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>SOPORTE</h4>
+                    <p class="support-text">L-V 9am - 6pm CST</p>
+                    <p class="support-text">Chatbot 24/7</p>
+                    <a href="mailto:support@marlot.ai" class="support-email">support@marlot.ai</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© marlot 2026</p>
+        </div>
+    </footer>
+
+    <!-- Side Menu - Dark Mode & Chatbot -->
+    <div class="side-menu">
+        <button class="side-menu-btn theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+        </button>
+        <button class="side-menu-btn chatbot-btn" id="chatbotBtn" aria-label="Abrir chatbot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>
