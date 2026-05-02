@@ -1,0 +1,17 @@
+{
+  "src/js/blog.js": {
+    "file": "assets/blog-DvS1Z6dC.js",
+    "name": "blog",
+    "src": "src/js/blog.js",
+    "isEntry": true
+  },
+  "src/js/main.js": {
+    "file": "assets/main-CyNMv5TI.js",
+    "name": "main",
+    "src": "src/js/main.js",
+    "isEntry": true,
+    "css": [
+      "assets/main-DlTsko3T.css"
+    ]
+  }
+}

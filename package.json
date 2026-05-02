@@ -1,0 +1,28 @@
+{
+  "name": "marlot_ai_web_test_openc",
+  "version": "1.0.0",
+  "description": "🤖 **Sitio web para Marlot AI** — Agencia de Inteligencia Artificial",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarnueLgh/Marlot-AI-Web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/MarnueLgh/Marlot-AI-Web/issues"
+  },
+  "homepage": "https://github.com/MarnueLgh/Marlot-AI-Web#readme",
+  "devDependencies": {
+    "vite": "^8.0.10"
+  },
+  "dependencies": {
+    "splitting": "^1.1.0"
+  }
+}

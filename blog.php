@@ -10,7 +10,8 @@ $titulo_pagina = 'Blog - Marlot AI | Insights de Inteligencia Artificial';
 $pagina_actual = 'blog';
 $ancla_footer = '';
 $hojas_estilo = [];
-$scripts_pagina = ['js/blog.js'];
+$scripts_pagina = [];
+$vite_entrada = 'src/js/main.js';
 
 require __DIR__ . '/includes/head.php';
 require __DIR__ . '/includes/nav.php';
@@ -165,6 +166,9 @@ if (!$articulo_destacado && count($articulos_recientes) > 0) {
 </section>
 
 <?php
+require_once __DIR__ . '/includes/vite.php';
+echo vite_tags('src/js/blog.js');
+
 require __DIR__ . '/includes/footer.php';
 require __DIR__ . '/includes/side_menu.php';
 require __DIR__ . '/includes/scripts.php';

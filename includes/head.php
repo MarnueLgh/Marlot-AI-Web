@@ -2,9 +2,11 @@
 /*
  * Autor: MarnueLgh
  * Fecha: 04/04/2026
- * Version: 1.1
- * Descripcion: Cabecera base HTML con estilos compartidos, metaetiquetas SEO y optimizacion de recursos
+ * Version: 2.0
+ * Descripcion: Cabecera base HTML con estilos compartidos, metaetiquetas SEO y carga de assets via Vite
  */
+
+require_once __DIR__ . '/vite.php';
 
 if (!isset($titulo_pagina)) {
 	$titulo_pagina = 'Marlot AI | Transformacion Digital';
@@ -20,6 +22,11 @@ if (!isset($meta_keywords)) {
 
 if (!isset($hojas_estilo) || !is_array($hojas_estilo)) {
 	$hojas_estilo = [];
+}
+
+/* Entry point Vite para esta pagina (default: main) */
+if (!isset($vite_entrada)) {
+	$vite_entrada = 'src/js/main.js';
 }
 ?>
 <!DOCTYPE html>
@@ -50,12 +57,9 @@ if (!isset($hojas_estilo) || !is_array($hojas_estilo)) {
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
 	</noscript>
 
-	<!-- Splitting.js CSS -->
-	<link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
-	<link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+	<!-- Vite Assets (CSS se inyecta aqui en produccion) -->
+	<?php echo vite_tags($vite_entrada); ?>
 
-	<!-- Main CSS -->
-	<link rel="stylesheet" href="css/styles.css">
 	<?php foreach ($hojas_estilo as $hoja_estilo): ?>
 		<?php if (!empty($hoja_estilo)): ?>
 		<link rel="stylesheet" href="<?php echo htmlspecialchars($hoja_estilo, ENT_QUOTES, 'UTF-8'); ?>">
