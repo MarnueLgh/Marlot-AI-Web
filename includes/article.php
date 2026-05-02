@@ -3,11 +3,11 @@
  * Autor: MarnueLgh
  * Fecha: 04/04/2026
  * Version: 1.0
- * Descripcion: Template reutilizable para mostrar un articulo completo
+ * Descripcion: Template reutilizable para mostrar un artículo completo
  */
 
 if (!isset($articulo)) {
-	trigger_error('Variable $articulo no definida. Use obtener_articulo() para cargar el articulo.', E_USER_WARNING);
+	trigger_error('Variable $articulo no definida. Use obtener_articulo() para cargar el artículo.', E_USER_WARNING);
 	return;
 }
 ?>

@@ -1,17 +1,27 @@
 {
+  "_lenis_init-BzIo9Afp.js": {
+    "file": "assets/lenis_init-BzIo9Afp.js",
+    "name": "lenis_init"
+  },
   "src/js/blog.js": {
-    "file": "assets/blog-DvS1Z6dC.js",
+    "file": "assets/blog-C04mjACi.js",
     "name": "blog",
     "src": "src/js/blog.js",
-    "isEntry": true
+    "isEntry": true,
+    "imports": [
+      "_lenis_init-BzIo9Afp.js"
+    ]
   },
   "src/js/main.js": {
-    "file": "assets/main-CyNMv5TI.js",
+    "file": "assets/main-guV_FSnH.js",
     "name": "main",
     "src": "src/js/main.js",
     "isEntry": true,
+    "imports": [
+      "_lenis_init-BzIo9Afp.js"
+    ],
     "css": [
-      "assets/main-DlTsko3T.css"
+      "assets/main-B8RimHg_.css"
     ]
   }
 }

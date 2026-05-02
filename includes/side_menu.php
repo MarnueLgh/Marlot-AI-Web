@@ -3,7 +3,7 @@
  * Autor: MarnueLgh
  * Fecha: 04/04/2026
  * Version: 1.0
- * Descripcion: Menu lateral con toggle de tema y boton chatbot
+ * Descripcion: Menú lateral con toggle de tema y botón chatbot
  */
 ?>
 <!-- Side Menu - Dark Mode & Chatbot -->

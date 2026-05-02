@@ -3,7 +3,7 @@
  * Autor: MarnueLgh
  * Fecha: 04/04/2026
  * Version: 1.0
- * Descripcion: Pagina de blog en PHP modular
+ * Descripcion: Página de blog en PHP modular
  */
 
 $titulo_pagina = 'Blog - Marlot AI | Insights de Inteligencia Artificial';
@@ -40,9 +40,9 @@ if (!$articulo_destacado && count($articulos_recientes) > 0) {
 	<div class="blog-hero-content">
 		<span class="blog-hero-tag">BLOG</span>
 		<h1 class="blog-hero-title">Descubre el futuro<br>de la IA</h1>
-		<p class="blog-hero-subtitle">Insights, tendencias y guias practicas para transformar tu negocio con inteligencia artificial.</p>
+		<p class="blog-hero-subtitle">Insights, tendencias y guías prácticas para transformar tu negocio con inteligencia artificial.</p>
 		<a href="#articles" class="blog-hero-cta">
-			<span>Explorar articulos</span>
+			<span>Explorar artículos</span>
 			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 				<path d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
 			</svg>
@@ -60,11 +60,11 @@ if (!$articulo_destacado && count($articulos_recientes) > 0) {
 <!-- Blog Articles Section -->
 <section class="blog-articles" id="articles">
 	<div class="blog-articles-header">
-		<h2 class="section-title">Ultimos articulos</h2>
+		<h2 class="section-title">Últimos artículos</h2>
 		<div class="blog-filters">
 			<button class="filter-btn active" data-filter="all">Todos</button>
 			<button class="filter-btn" data-filter="ia">IA</button>
-			<button class="filter-btn" data-filter="automation">Automatizacion</button>
+			<button class="filter-btn" data-filter="automation">Automatización</button>
 			<button class="filter-btn" data-filter="tips">Tips</button>
 		</div>
 	</div>
@@ -115,7 +115,7 @@ if (!$articulo_destacado && count($articulos_recientes) > 0) {
 	</div>
 
 	<div class="blog-load-more">
-		<button class="load-more-btn">Cargar mas articulos</button>
+		<button class="load-more-btn">Cargar más artículos</button>
 	</div>
 </section>
 
@@ -123,7 +123,7 @@ if (!$articulo_destacado && count($articulos_recientes) > 0) {
 <section class="parallax-section">
 	<div class="parallax-intro">
 		<h2 class="parallax-title">Visualiza el futuro</h2>
-		<p class="parallax-subtitle">Explora como la IA esta transformando industrias</p>
+		<p class="parallax-subtitle">Explora cómo la IA está transformando industrias</p>
 	</div>
 
 	<div class="zoom-parallax-container" id="zoomParallax">

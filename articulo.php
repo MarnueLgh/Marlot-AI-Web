@@ -3,7 +3,7 @@
  * Autor: MarnueLgh
  * Fecha: 04/04/2026
  * Version: 1.0
- * Descripcion: Pagina individual de articulo del blog
+ * Descripcion: Página individual de artículo del blog
  */
 
 require __DIR__ . '/includes/articulos.php';
@@ -13,7 +13,7 @@ $articulo = obtener_articulo($slug);
 
 if (!$articulo) {
 	header('HTTP/1.0 404 Not Found');
-	$titulo_pagina = '404 - Articulo no encontrado | Marlot AI';
+	$titulo_pagina = '404 - Artículo no encontrado | Marlot AI';
 	$pagina_actual = 'articulo';
 	$ancla_footer = '';
 	$hojas_estilo = [];
@@ -25,7 +25,7 @@ if (!$articulo) {
 	<main class="article-page">
 		<div class="article-main article-404">
 			<h1>404</h1>
-			<p>Articulo no encontrado</p>
+			<p>Artículo no encontrado</p>
 			<a href="blog.php" class="value-btn">Volver al Blog</a>
 		</div>
 	</main>

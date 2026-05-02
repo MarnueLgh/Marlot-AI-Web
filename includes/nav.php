@@ -3,7 +3,7 @@
  * Autor: MarnueLgh
  * Fecha: 04/04/2026
  * Version: 1.0
- * Descripcion: Navegacion principal reutilizable para home y blog
+ * Descripcion: Navegación principal reutilizable para home y blog
  */
 
 if (!isset($pagina_actual)) {

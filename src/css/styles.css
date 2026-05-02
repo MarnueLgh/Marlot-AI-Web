@@ -41,7 +41,24 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth — deshabilitado, Lenis controla el scroll */
+}
+
+/* Lenis Smooth Scroll */
+html.lenis, html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
 }
 
 body {
@@ -261,6 +278,11 @@ ul {
 /* -----------------------------------------
    Animación: Desenfoque Cinematográfico (Subjetivo)
    ----------------------------------------- */
+html.js-enabled .anim-cinematic:not(.active) {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .anim-cinematic.active .char {
     animation: cinematicFade 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
     animation-delay: calc(30ms * var(--char-index));

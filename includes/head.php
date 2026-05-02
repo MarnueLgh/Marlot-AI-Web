@@ -3,21 +3,21 @@
  * Autor: MarnueLgh
  * Fecha: 04/04/2026
  * Version: 2.0
- * Descripcion: Cabecera base HTML con estilos compartidos, metaetiquetas SEO y carga de assets via Vite
+ * Descripcion: Cabecera base HTML con estilos compartidos, metaetiquetas SEO y carga de assets vía Vite
  */
 
 require_once __DIR__ . '/vite.php';
 
 if (!isset($titulo_pagina)) {
-	$titulo_pagina = 'Marlot AI | Transformacion Digital';
+	$titulo_pagina = 'Marlot AI | Transformación Digital';
 }
 
 if (!isset($meta_descripcion)) {
-	$meta_descripcion = 'Marlot AI ayuda a transformar tu negocio con soluciones de inteligencia artificial, automatizacion y chatbots avanzados.';
+	$meta_descripcion = 'Marlot AI ayuda a transformar tu negocio con soluciones de inteligencia artificial, automatización y chatbots avanzados.';
 }
 
 if (!isset($meta_keywords)) {
-	$meta_keywords = 'inteligencia artificial, automatizacion, chatbots, tecnologia, negocios, marlot ai';
+	$meta_keywords = 'inteligencia artificial, automatización, chatbots, tecnología, negocios, marlot ai';
 }
 
 if (!isset($hojas_estilo) || !is_array($hojas_estilo)) {
@@ -35,6 +35,13 @@ if (!isset($vite_entrada)) {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 	<title><?php echo htmlspecialchars($titulo_pagina, ENT_QUOTES, 'UTF-8'); ?></title>
+	<script>
+		document.documentElement.classList.add('js-enabled');
+		if ('scrollRestoration' in history) {
+			history.scrollRestoration = 'manual';
+		}
+		window.scrollTo(0, 0);
+	</script>
 	
 	<!-- SEO Meta Tags -->
 	<meta name="description" content="<?php echo htmlspecialchars($meta_descripcion, ENT_QUOTES, 'UTF-8'); ?>">
@@ -63,7 +70,7 @@ if (!isset($vite_entrada)) {
 		'src/css/styles.css',
 	]); ?>
 
-	<!-- Vite Assets (JS + CSS en produccion) -->
+	<!-- Vite Assets (JS + CSS en producción) -->
 	<?php echo vite_tags($vite_entrada); ?>
 
 	<?php foreach ($hojas_estilo as $hoja_estilo): ?>

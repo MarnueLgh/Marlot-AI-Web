@@ -32,8 +32,8 @@ require __DIR__ . '/includes/nav.php';
 <section class="services" id="servicios">
 	<div class="services-intro">
 		<p class="services-label">SOLUCIONES IA</p>
-		<h2 class="services-title">Servicios disenados para impacto real</h2>
-		<p class="services-text">Elige el punto de entrada ideal para tu negocio y escala con acompanamiento de Marlot AI.</p>
+		<h2 class="services-title">Servicios diseñados para impacto real</h2>
+		<p class="services-text">Elige el punto de entrada ideal para tu negocio y escala con acompañamiento de Marlot AI.</p>
 	</div>
 
 	<div class="services-container">
@@ -49,8 +49,8 @@ require __DIR__ . '/includes/nav.php';
 				</div>
 			</div>
 			<div class="service-info">
-				<h3 class="service-name">Agentes de atencion</h3>
-				<p class="service-desc">Atencion automatizada 24/7 para WhatsApp, web y redes sociales.</p>
+				<h3 class="service-name">Agentes de atención</h3>
+				<p class="service-desc">Atención automatizada 24/7 para WhatsApp, web y redes sociales.</p>
 				<ul class="service-benefits">
 					<li>Responde preguntas frecuentes en segundos</li>
 					<li>Deriva casos complejos a tu equipo</li>
@@ -76,15 +76,15 @@ require __DIR__ . '/includes/nav.php';
 				</div>
 			</div>
 			<div class="service-info">
-				<h3 class="service-name">Gestion de datos</h3>
+				<h3 class="service-name">Gestión de datos</h3>
 				<p class="service-desc">Centraliza, ordena y activa datos para tomar decisiones con contexto.</p>
 				<ul class="service-benefits">
-					<li>Conecta fuentes de informacion en un solo flujo</li>
+					<li>Conecta fuentes de información en un solo flujo</li>
 					<li>Automatiza reportes para ventas y operaciones</li>
 					<li>Reduce errores manuales y reprocesos</li>
 				</ul>
 				<div class="service-metrics">
-					<span class="service-metric">Reportes automaticos</span>
+					<span class="service-metric">Reportes automáticos</span>
 					<span class="service-metric">Menos errores operativos</span>
 				</div>
 				<a href="#contacto" class="service-cta">Ver implementacion</a>
@@ -104,14 +104,14 @@ require __DIR__ . '/includes/nav.php';
 			</div>
 			<div class="service-info">
 				<h3 class="service-name">Marketing con IA</h3>
-				<p class="service-desc">Genera contenido y campanas con mayor velocidad y mejor consistencia.</p>
+				<p class="service-desc">Genera contenido y campañas con mayor velocidad y mejor consistencia.</p>
 				<ul class="service-benefits">
 					<li>Ideas de contenido alineadas a tu marca</li>
 					<li>Copys listos para anuncios y redes</li>
-					<li>Flujos para publicacion recurrente</li>
+					<li>Flujos para publicación recurrente</li>
 				</ul>
 				<div class="service-metrics">
-					<span class="service-metric">Mas contenido util</span>
+					<span class="service-metric">Más contenido útil</span>
 					<span class="service-metric">Menos tiempo por pieza</span>
 				</div>
 				<a href="#contacto" class="service-cta">Solicitar demo</a>
@@ -134,7 +134,7 @@ require __DIR__ . '/includes/nav.php';
 				<p class="service-desc">Automatiza tareas repetitivas del equipo y libera tiempo para vender.</p>
 				<ul class="service-benefits">
 					<li>Gestiona agenda, seguimiento y recordatorios</li>
-					<li>Apoya tareas administrativas del dia a dia</li>
+					<li>Apoya tareas administrativas del día a día</li>
 					<li>Mejora velocidad de respuesta interna</li>
 				</ul>
 				<div class="service-metrics">
@@ -152,11 +152,11 @@ require __DIR__ . '/includes/nav.php';
 		<div class="value-content">
 			<p class="value-label">IA PARA PYMES</p>
 			<h2 class="value-title">Transforma operaciones sin crecer costos</h2>
-			<p class="value-description">Implementamos automatizacion aplicada a ventas, operaciones y soporte con foco en impacto real desde las primeras semanas.</p>
+			<p class="value-description">Implementamos automatización aplicada a ventas, operaciones y soporte con foco en impacto real desde las primeras semanas.</p>
 			<ul class="value-points">
-				<li>Implementacion por fases, sin frenar tu operacion actual</li>
-				<li>Integracion con tus canales y herramientas existentes</li>
-				<li>Acompanamiento humano para tu equipo en cada etapa</li>
+				<li>Implementación por fases, sin frenar tu operación actual</li>
+				<li>Integración con tus canales y herramientas existentes</li>
+				<li>Acompañamiento humano para tu equipo en cada etapa</li>
 			</ul>
 			<div class="value-actions">
 				<a href="#contacto" class="value-btn">SOLICITAR DEMO</a>
@@ -164,7 +164,7 @@ require __DIR__ . '/includes/nav.php';
 			</div>
 		</div>
 		<div class="value-image">
-			<article class="valor-comparativa" aria-label="Comparativa antes y despues de implementar soluciones de IA">
+			<article class="valor-comparativa" aria-label="Comparativa antes y después de implementar soluciones de IA">
 				<div class="valor-grid">
 					<section class="valor-columna">
 						<h3 class="valor-estado">Antes</h3>
@@ -175,17 +175,17 @@ require __DIR__ . '/includes/nav.php';
 						</ul>
 					</section>
 					<section class="valor-columna">
-						<h3 class="valor-estado valor-exito">Despues</h3>
+						<h3 class="valor-estado valor-exito">Después</h3>
 						<ul class="valor-lista">
 							<li class="valor-item valor-exito">Flujos automatizados para tareas clave</li>
-							<li class="valor-item valor-exito">Informacion centralizada y accionable</li>
-							<li class="valor-item valor-exito">Atencion asistida 24/7 con contexto</li>
+							<li class="valor-item valor-exito">Información centralizada y accionable</li>
+							<li class="valor-item valor-exito">Atención asistida 24/7 con contexto</li>
 						</ul>
 					</section>
 				</div>
 
 				<div class="valor-tiempo">
-					<span class="valor-texto">Tiempo de implementacion estimado</span>
+					<span class="valor-texto">Tiempo de implementación estimado</span>
 					<strong class="valor-dato">2 a 4 semanas</strong>
 				</div>
 
@@ -278,10 +278,10 @@ require __DIR__ . '/includes/nav.php';
 				<span class="stars">★★★★★</span>
 				<span class="rating-count">Beta</span>
 			</div>
-			<h3 class="case-title">COMO FUNCIONA</h3>
+			<h3 class="case-title">CÓMO FUNCIONA</h3>
 			<p class="case-subtitle">Interfaz conversacional</p>
-			<h2 class="value-title">Tan facil como chatear</h2>
-			<p class="value-description">Interactua con una interfaz simple mediante mensajes y la IA ejecuta tareas automaticamente. Sin complicaciones tecnicas, sin curva de aprendizaje. Solo escribe lo que necesitas.</p>
+			<h2 class="value-title">Tan fácil como chatear</h2>
+			<p class="value-description">Interactúa con una interfaz simple mediante mensajes y la IA ejecuta tareas automáticamente. Sin complicaciones técnicas, sin curva de aprendizaje. Solo escribe lo que necesitas.</p>
 			<a href="#contacto" class="value-btn">SOLICITAR DEMO</a>
 		</div>
 	</div>
