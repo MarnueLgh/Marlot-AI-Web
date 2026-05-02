@@ -79,18 +79,21 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Blog Cards Entrance con ScrollTrigger
 	// =============================================
 	tarjetas_blog.forEach((card, indice) => {
-		gsap.from(card, {
-			opacity: 0,
-			y: 30,
-			duration: 0.6,
-			ease: 'power2.out',
-			delay: indice * 0.1,
-			scrollTrigger: {
-				trigger: card,
-				start: 'top 90%',
-				toggleActions: 'play none none none',
-			},
-		});
+		gsap.fromTo(card, 
+			{ autoAlpha: 0, y: 30 },
+			{
+				autoAlpha: 1,
+				y: 0,
+				duration: 0.6,
+				ease: 'power2.out',
+				delay: indice * 0.1,
+				scrollTrigger: {
+					trigger: card,
+					start: 'top 90%',
+					toggleActions: 'play none none none',
+				},
+			}
+		);
 	});
 
 	// =============================================
@@ -132,5 +135,23 @@ document.addEventListener('DOMContentLoaded', function () {
 	const navbar = document.getElementById('navbar');
 	if (navbar && navbar.classList.contains('navbar-blog')) {
 		navbar.classList.add('scrolled');
+	}
+});
+
+/* =============================================
+   Restauracion desde bfcache (boton atras/adelante)
+   ============================================= */
+window.addEventListener('pageshow', function (evento) {
+	if (evento.persisted) {
+		/* Limpiar estilos inline de GSAP en elementos del blog */
+		const selectores_blog = '.blog-card, .parallax-image-wrapper';
+		document.querySelectorAll(selectores_blog).forEach(function (el) {
+			el.style.removeProperty('visibility');
+			el.style.removeProperty('opacity');
+			el.style.removeProperty('transform');
+			gsap.set(el, { autoAlpha: 1, y: 0 });
+		});
+
+		ScrollTrigger.refresh(true);
 	}
 });

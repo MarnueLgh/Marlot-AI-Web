@@ -16,18 +16,21 @@ export function animar_fade_in() {
 	);
 
 	elementos.forEach((elemento, indice) => {
-		gsap.from(elemento, {
-			opacity: 0,
-			y: 30,
-			duration: 0.6,
-			ease: 'power2.out',
-			scrollTrigger: {
-				trigger: elemento,
-				start: 'top 90%',
-				toggleActions: 'play none none none',
-			},
-			delay: indice % 3 * 0.1,
-		});
+		gsap.fromTo(elemento, 
+			{ autoAlpha: 0, y: 30 },
+			{
+				autoAlpha: 1,
+				y: 0,
+				duration: 0.6,
+				ease: 'power2.out',
+				scrollTrigger: {
+					trigger: elemento,
+					start: 'top 90%',
+					toggleActions: 'play none none none',
+				},
+				delay: indice % 3 * 0.1,
+			}
+		);
 	});
 }
 

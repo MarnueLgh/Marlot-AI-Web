@@ -622,6 +622,195 @@ html.js-enabled .anim-cinematic:not(.active) {
     background-color: #f25c69;
 }
 
+/*
+ * Autor: MarnueLgh
+ * Fecha: 02/05/2026
+ * Versión: 1.0
+ * Descripción: Estilos del acordeón horizontal de métricas.
+ *              Agregar dentro de styles.css en su sección correspondiente.
+ */
+ 
+/* ── Sección: Métricas ───────────────────────────────── */
+ 
+.metricas {
+	padding: 5rem 2rem;
+	background-color: var(--color-bg);
+}
+ 
+.metricas-acordeon {
+	display: flex;
+	width: 100%;
+	height: 450px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+ 
+/* Tarjeta base */
+.metricas-tarjeta {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	border-radius: 1.3rem;
+	cursor: pointer;
+	flex: 0 0 6rem;
+}
+ 
+/* Overlap: cada tarjeta (excepto la primera) se monta sobre la anterior */
+.metricas-tarjeta:not(:first-child) {
+	margin-left: -2rem;
+}
+ 
+/* Z-index decreciente para que la izquierda monte sobre la derecha */
+.metricas-tarjeta:nth-child(1) { z-index: 10; }
+.metricas-tarjeta:nth-child(2) { z-index: 9; }
+.metricas-tarjeta:nth-child(3) { z-index: 8; }
+.metricas-tarjeta:nth-child(4) { z-index: 7; }
+ 
+/* Tarjeta activa */
+.metricas-tarjeta-activa {
+	flex: 1 1 0%;
+}
+ 
+/* ── Contenido activo ─────────────────────────────────── */
+ 
+.metricas-contenido {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 800px;
+	padding: 2.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	opacity: 0;
+	pointer-events: none;
+}
+ 
+/* Desplazamiento para tarjetas que no son la primera (por el overlap) */
+.metricas-tarjeta:not(:first-child) .metricas-contenido {
+	padding-left: 4rem;
+}
+ 
+.metricas-tarjeta-activa .metricas-contenido {
+	opacity: 1;
+	pointer-events: auto;
+}
+ 
+.metricas-descripcion {
+	width: 320px;
+	font-size: 0.95rem;
+	line-height: 1.5;
+	font-weight: 500;
+	margin: 0;
+}
+ 
+.metricas-numero {
+	position: absolute;
+	top: 50%;
+	right: 3rem;
+	transform: translateY(-50%);
+	font-size: clamp(4rem, 9vw, 8rem);
+	font-weight: 600;
+	letter-spacing: -0.04em;
+	line-height: 1;
+}
+ 
+.metricas-titulo {
+	align-self: flex-end;
+	text-align: right;
+	font-size: 0.85rem;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	line-height: 1.4;
+	margin: 0;
+}
+ 
+/* ── Contenido inactivo (texto vertical) ─────────────── */
+ 
+.metricas-vertical {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 1;
+}
+ 
+.metricas-tarjeta-activa .metricas-vertical {
+	opacity: 0;
+	pointer-events: none;
+}
+ 
+.metricas-vertical span {
+	font-size: 1.5rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	transform: rotate(-90deg);
+	white-space: nowrap;
+}
+ 
+/* Overlay hover sutil en tarjetas inactivas */
+.metricas-tarjeta:not(.metricas-tarjeta-activa):hover::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.06);
+	pointer-events: none;
+}
+
+ 
+ 
+/* ── Media Queries: Métricas ──────────────────────────── */
+ 
+@media (max-width: 768px) {
+	.metricas-acordeon {
+		flex-direction: column;
+		height: auto;
+	}
+ 
+	.metricas-tarjeta {
+		flex: 0 0 5rem !important;
+		border-radius: 1rem;
+		margin-left: 0 !important;
+		margin-top: -1rem;
+	}
+ 
+	.metricas-tarjeta-activa {
+		flex: 0 0 320px !important;
+	}
+ 
+	.metricas-tarjeta:nth-child(1) { z-index: 10; }
+	.metricas-tarjeta:nth-child(2) { z-index: 9; }
+	.metricas-tarjeta:nth-child(3) { z-index: 8; }
+	.metricas-tarjeta:nth-child(4) { z-index: 7; }
+ 
+	.metricas-vertical span {
+		transform: rotate(0deg);
+	}
+ 
+	.metricas-contenido {
+		width: 100%;
+		padding: 2rem;
+	}
+ 
+	.metricas-tarjeta:not(:first-child) .metricas-contenido {
+		padding-left: 2rem;
+		padding-top: 3rem;
+	}
+ 
+	.metricas-descripcion {
+		width: 100%;
+	}
+ 
+	.metricas-numero {
+		font-size: 4rem;
+		right: 1.5rem;
+	}
+}
+ 
+
 /* =============================================
    Value Section (Two Columns)
    ============================================= */
@@ -1720,15 +1909,16 @@ html.js-enabled .anim-cinematic:not(.active) {
 /* =============================================
    Animations & Effects
    ============================================= */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+/* Prevenir FOUC en elementos animados con GSAP (requiere .js-enabled en <html>) */
+html.js-enabled .service-card,
+html.js-enabled .value-content,
+html.js-enabled .valor-comparativa,
+html.js-enabled .value-image-placeholder,
+html.js-enabled .stat-item,
+html.js-enabled .blog-card {
+    visibility: hidden;
+    opacity: 0;
 }
 
 /* Smooth scroll offset for fixed nav */

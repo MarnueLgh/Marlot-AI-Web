@@ -32,17 +32,10 @@ if (!isset($vite_entrada)) {
 <!DOCTYPE html>
 <html lang="es">
 <head>
+	<script>document.documentElement.classList.add('js-enabled');</script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 	<title><?php echo htmlspecialchars($titulo_pagina, ENT_QUOTES, 'UTF-8'); ?></title>
-	<script>
-		document.documentElement.classList.add('js-enabled');
-		if ('scrollRestoration' in history) {
-			history.scrollRestoration = 'manual';
-		}
-		window.scrollTo(0, 0);
-	</script>
-	
 	<!-- SEO Meta Tags -->
 	<meta name="description" content="<?php echo htmlspecialchars($meta_descripcion, ENT_QUOTES, 'UTF-8'); ?>">
 	<meta name="keywords" content="<?php echo htmlspecialchars($meta_keywords, ENT_QUOTES, 'UTF-8'); ?>">

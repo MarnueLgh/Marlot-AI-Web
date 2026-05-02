@@ -199,7 +199,9 @@ require __DIR__ . '/includes/nav.php';
 	</div>
 </section>
 
-<section class="stats-section">
+<?php include('includes/acordeon_metricas.php'); ?>
+
+<!-- <section class="stats-section">
 	<div class="bento-grid">
 		<div class="bento-card bento-mint">
 			<div class="bento-content">
@@ -256,7 +258,7 @@ require __DIR__ . '/includes/nav.php';
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <section class="value-section value-section-alt" id="casos">
 	<div class="value-container value-container-reverse">
