@@ -56,8 +56,14 @@ if (!isset($vite_entrada)) {
 	<noscript>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
 	</noscript>
+	<!-- CSS bloqueante (dev: via Vite server / prod: via manifest en vite_tags) -->
+	<?php echo vite_precargar_css([
+		'node_modules/splitting/dist/splitting.css',
+		'node_modules/splitting/dist/splitting-cells.css',
+		'src/css/styles.css',
+	]); ?>
 
-	<!-- Vite Assets (CSS se inyecta aqui en produccion) -->
+	<!-- Vite Assets (JS + CSS en produccion) -->
 	<?php echo vite_tags($vite_entrada); ?>
 
 	<?php foreach ($hojas_estilo as $hoja_estilo): ?>

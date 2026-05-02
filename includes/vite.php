@@ -89,6 +89,28 @@ function vite_tags_desarrollo($entrada) {
 }
 
 /**
+ * Precarga archivos CSS como <link> bloqueantes en modo desarrollo para evitar FOUC
+ * En produccion no hace nada (el manifest ya genera los <link> correctos)
+ *
+ * @param array $rutas_css Array de rutas relativas de CSS (ej: ['src/css/styles.css'])
+ * @return string Etiquetas <link> bloqueantes
+ */
+function vite_precargar_css($rutas_css = []) {
+	if (!es_modo_desarrollo()) {
+		return '';
+	}
+
+	$servidor = 'http://localhost:5173';
+	$tags = '';
+
+	foreach ($rutas_css as $ruta) {
+		$tags .= '<link rel="stylesheet" href="' . $servidor . '/' . htmlspecialchars($ruta) . '">' . "\n";
+	}
+
+	return $tags;
+}
+
+/**
  * Etiquetas para modo produccion (archivos hasheados desde manifest)
  */
 function vite_tags_produccion($entrada) {
