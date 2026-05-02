@@ -633,14 +633,17 @@ html.js-enabled .anim-cinematic:not(.active) {
 /* ── Sección: Métricas ───────────────────────────────── */
  
 .metricas {
-	padding: 5rem 2rem;
+	padding: clamp(2.75rem, 6vw, 5rem) clamp(1rem, 4vw, 2rem);
 	background-color: var(--color-bg);
 }
  
 .metricas-acordeon {
+	--metricas-flex-activa: 1 1 0%;
+	--metricas-flex-inactiva: 0 0 5.5rem;
+	--metricas-overlap: -1.4rem;
 	display: flex;
 	width: 100%;
-	height: 450px;
+	height: clamp(23rem, 38vw, 28rem);
 	max-width: 1200px;
 	margin: 0 auto;
 }
@@ -650,14 +653,16 @@ html.js-enabled .anim-cinematic:not(.active) {
 	position: relative;
 	height: 100%;
 	overflow: hidden;
-	border-radius: 1.3rem;
+	border-radius: 1.1rem;
 	cursor: pointer;
-	flex: 0 0 6rem;
+	flex: var(--metricas-flex-inactiva);
+	min-width: 0;
+	transition: box-shadow var(--transition-medium);
 }
  
 /* Overlap: cada tarjeta (excepto la primera) se monta sobre la anterior */
 .metricas-tarjeta:not(:first-child) {
-	margin-left: -2rem;
+	margin-left: var(--metricas-overlap);
 }
  
 /* Z-index decreciente para que la izquierda monte sobre la derecha */
@@ -668,7 +673,12 @@ html.js-enabled .anim-cinematic:not(.active) {
  
 /* Tarjeta activa */
 .metricas-tarjeta-activa {
-	flex: 1 1 0%;
+	flex: var(--metricas-flex-activa);
+}
+
+.metricas-tarjeta:focus-visible {
+	outline: 3px solid rgba(242, 92, 105, 0.45);
+	outline-offset: 4px;
 }
  
 /* ── Contenido activo ─────────────────────────────────── */
@@ -678,8 +688,9 @@ html.js-enabled .anim-cinematic:not(.active) {
 	top: 0;
 	left: 0;
 	height: 100%;
-	width: 800px;
-	padding: 2.5rem;
+	width: 100%;
+	max-width: 100%;
+	padding: clamp(1.6rem, 3vw, 2.35rem);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -689,7 +700,7 @@ html.js-enabled .anim-cinematic:not(.active) {
  
 /* Desplazamiento para tarjetas que no son la primera (por el overlap) */
 .metricas-tarjeta:not(:first-child) .metricas-contenido {
-	padding-left: 4rem;
+	padding-left: clamp(2.2rem, 4vw, 3.2rem);
 }
  
 .metricas-tarjeta-activa .metricas-contenido {
@@ -698,7 +709,7 @@ html.js-enabled .anim-cinematic:not(.active) {
 }
  
 .metricas-descripcion {
-	width: 320px;
+	width: min(100%, 20rem);
 	font-size: 0.95rem;
 	line-height: 1.5;
 	font-weight: 500;
@@ -708,9 +719,9 @@ html.js-enabled .anim-cinematic:not(.active) {
 .metricas-numero {
 	position: absolute;
 	top: 50%;
-	right: 3rem;
+	right: clamp(1.5rem, 4vw, 3rem);
 	transform: translateY(-50%);
-	font-size: clamp(4rem, 9vw, 8rem);
+	font-size: clamp(3.5rem, 8vw, 7.25rem);
 	font-weight: 600;
 	letter-spacing: -0.04em;
 	line-height: 1;
@@ -725,6 +736,7 @@ html.js-enabled .anim-cinematic:not(.active) {
 	text-transform: uppercase;
 	line-height: 1.4;
 	margin: 0;
+	max-width: 14rem;
 }
  
 /* ── Contenido inactivo (texto vertical) ─────────────── */
@@ -744,7 +756,7 @@ html.js-enabled .anim-cinematic:not(.active) {
 }
  
 .metricas-vertical span {
-	font-size: 1.5rem;
+	font-size: clamp(1.1rem, 2vw, 1.45rem);
 	font-weight: 700;
 	letter-spacing: 0.1em;
 	transform: rotate(-90deg);
@@ -765,20 +777,29 @@ html.js-enabled .anim-cinematic:not(.active) {
 /* ── Media Queries: Métricas ──────────────────────────── */
  
 @media (max-width: 768px) {
+	.metricas {
+		padding: clamp(2.25rem, 8vw, 3.5rem) 1rem;
+	}
+
 	.metricas-acordeon {
+		--metricas-flex-activa: 0 0 clamp(19rem, 76vw, 25rem);
+		--metricas-flex-inactiva: 0 0 4.75rem;
+		--metricas-overlap: -0.75rem;
 		flex-direction: column;
 		height: auto;
 	}
  
 	.metricas-tarjeta {
-		flex: 0 0 5rem !important;
+		flex: var(--metricas-flex-inactiva);
 		border-radius: 1rem;
-		margin-left: 0 !important;
-		margin-top: -1rem;
+		height: auto;
+		min-height: 4.75rem;
+		margin-left: 0;
+		margin-top: var(--metricas-overlap);
 	}
  
 	.metricas-tarjeta-activa {
-		flex: 0 0 320px !important;
+		flex: var(--metricas-flex-activa);
 	}
  
 	.metricas-tarjeta:nth-child(1) { z-index: 10; }
@@ -792,21 +813,76 @@ html.js-enabled .anim-cinematic:not(.active) {
  
 	.metricas-contenido {
 		width: 100%;
-		padding: 2rem;
+		padding: 1.35rem;
 	}
  
 	.metricas-tarjeta:not(:first-child) .metricas-contenido {
-		padding-left: 2rem;
-		padding-top: 3rem;
+		padding-left: 1.35rem;
+		padding-top: 2rem;
 	}
  
 	.metricas-descripcion {
 		width: 100%;
+		max-width: 22rem;
+		font-size: 0.9rem;
 	}
  
 	.metricas-numero {
-		font-size: 4rem;
-		right: 1.5rem;
+		position: static;
+		transform: none;
+		font-size: clamp(3rem, 16vw, 4.25rem);
+		margin-top: auto;
+		align-self: flex-start;
+	}
+
+	.metricas-titulo {
+		align-self: flex-start;
+		text-align: left;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+	.metricas-acordeon {
+		--metricas-flex-inactiva: 0 0 4.8rem;
+		--metricas-overlap: -1rem;
+		height: 24rem;
+	}
+
+	.metricas-contenido {
+		padding: 1.8rem;
+	}
+
+	.metricas-tarjeta:not(:first-child) .metricas-contenido {
+		padding-left: 2.6rem;
+	}
+
+	.metricas-descripcion {
+		width: min(100%, 18rem);
+		font-size: 0.9rem;
+	}
+
+	.metricas-numero {
+		font-size: clamp(3.5rem, 7vw, 5.5rem);
+	}
+}
+
+@media (max-width: 480px) {
+	.metricas-acordeon {
+		--metricas-flex-activa: 0 0 clamp(21rem, 88vw, 25rem);
+	}
+
+	.metricas-contenido {
+		padding: 1.15rem;
+	}
+
+	.metricas-tarjeta:not(:first-child) .metricas-contenido {
+		padding-left: 1.15rem;
+	}
+
+	.metricas-descripcion {
+		font-size: 0.86rem;
+		line-height: 1.45;
 	}
 }
  
