@@ -1,0 +1,26 @@
+# Cursor Rules
+
+Este proyecto usa como fuente principal `AGENTS.md`.
+
+Reglas activas para Cursor:
+
+- Usar espanol en identificadores nuevos, salvo excepciones permitidas.
+- Preferir snake_case para funciones/variables nuevas en PHP y JS.
+- No mezclar snake_case y camelCase en el mismo bloque nuevo.
+- Clases CSS nuevas: `seccion-elemento` con un solo guion (`-`).
+- Prohibido BEM (`__`, `--`) en clases nuevas.
+- No usar `id` para estilos CSS nuevos.
+- Incluir encabezado en archivos nuevos (Autor/Fecha/Version/Descripcion).
+- Evitar JS inline en HTML para nuevas funcionalidades.
+- Objetivo de arquitectura:
+  - paginas PHP completas en raiz,
+  - fragmentos en `includes/`,
+  - JS propio centralizado en `js/main.js` (o entrada definida).
+- No introducir dependencias externas sin instruccion explicita.
+- Priorizar consistencia del archivo tocado para no romper estilo legacy.
+- Verificar responsive y consola limpia en paginas afectadas.
+
+Si hay conflicto:
+1) instruccion del desarrollador,
+2) convencion dominante del archivo,
+3) AGENTS.md.

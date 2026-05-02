@@ -26,11 +26,26 @@
             </div>
             <div class="nav-right">
                 <a href="index.html#contacto" class="nav-link">CONTACTO</a>
-                <a href="blog.html" class="nav-link nav-active">BLOG</a>
+                <a href="index.php" class="nav-link">BLOG</a>
                 <a href="#" class="nav-link nav-cta">AGENDA UNA LLAMADA</a>
             </div>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
+
+    <!-- Mobile Menu Drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html#servicios">SERVICIOS</a>
+        <a href="index.html#nosotros">NOSOTROS</a>
+        <a href="index.html#casos">CASOS</a>
+        <a href="index.html#contacto">CONTACTO</a>
+        <a href="index.php">BLOG</a>
+        <a href="#" class="mobile-menu-cta">AGENDA UNA LLAMADA</a>
+    </div>
 
     <!-- Blog Hero Section -->
     <section class="blog-hero">
@@ -75,91 +90,103 @@
         <div class="blog-grid">
             <!-- Featured Article -->
             <article class="blog-card blog-card-featured" data-category="ia">
-                <div class="blog-card-image">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop" alt="IA Generativa">
-                    <span class="blog-card-tag">DESTACADO</span>
-                </div>
-                <div class="blog-card-content">
-                    <span class="blog-card-category">Inteligencia Artificial</span>
-                    <h3 class="blog-card-title">El impacto de la IA generativa en las PyMEs</h3>
-                    <p class="blog-card-excerpt">Descubre cómo las pequeñas empresas pueden aprovechar herramientas de IA generativa para competir con grandes corporaciones.</p>
-                    <div class="blog-card-meta">
-                        <span class="blog-card-date">Ene 8, 2026</span>
-                        <span class="blog-card-read">5 min lectura</span>
+                <a href="articulo.php?slug=ia-generativa">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop" alt="IA Generativa" loading="lazy" width="800" height="600">
+                        <span class="blog-card-tag">DESTACADO</span>
                     </div>
-                </div>
+                    <div class="blog-card-content">
+                        <span class="blog-card-category">Inteligencia Artificial</span>
+                        <h3 class="blog-card-title">El impacto de la IA generativa en las PyMEs</h3>
+                        <p class="blog-card-excerpt">Descubre cómo las pequeñas empresas pueden aprovechar herramientas de IA generativa para competir con grandes corporaciones.</p>
+                        <div class="blog-card-meta">
+                            <span class="blog-card-date">Ene 8, 2026</span>
+                            <span class="blog-card-read">5 min lectura</span>
+                        </div>
+                    </div>
+                </a>
             </article>
 
             <!-- Regular Articles -->
             <article class="blog-card" data-category="automation">
-                <div class="blog-card-image">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Automatización">
-                    <span class="blog-card-tag tag-new">NUEVO</span>
-                </div>
-                <div class="blog-card-content">
-                    <span class="blog-card-category">Automatización</span>
-                    <h3 class="blog-card-title">5 procesos que deberías automatizar hoy</h3>
-                    <div class="blog-card-meta">
-                        <span class="blog-card-date">Ene 6, 2026</span>
-                        <span class="blog-card-read">3 min</span>
+                <a href="articulo.php?slug=5-procesos">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Automatización" loading="lazy" width="600" height="400">
+                        <span class="blog-card-tag tag-new">NUEVO</span>
                     </div>
-                </div>
+                    <div class="blog-card-content">
+                        <span class="blog-card-category">Automatización</span>
+                        <h3 class="blog-card-title">5 procesos que deberías automatizar hoy</h3>
+                        <div class="blog-card-meta">
+                            <span class="blog-card-date">Ene 6, 2026</span>
+                            <span class="blog-card-read">3 min</span>
+                        </div>
+                    </div>
+                </a>
             </article>
 
             <article class="blog-card" data-category="tips">
-                <div class="blog-card-image">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Productividad">
-                </div>
-                <div class="blog-card-content">
-                    <span class="blog-card-category">Tips</span>
-                    <h3 class="blog-card-title">Cómo elegir el chatbot correcto para tu negocio</h3>
-                    <div class="blog-card-meta">
-                        <span class="blog-card-date">Ene 4, 2026</span>
-                        <span class="blog-card-read">4 min</span>
+                <a href="articulo.php?slug=chatbot-correcto">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Productividad" loading="lazy" width="600" height="400">
                     </div>
-                </div>
+                    <div class="blog-card-content">
+                        <span class="blog-card-category">Tips</span>
+                        <h3 class="blog-card-title">Cómo elegir el chatbot correcto para tu negocio</h3>
+                        <div class="blog-card-meta">
+                            <span class="blog-card-date">Ene 4, 2026</span>
+                            <span class="blog-card-read">4 min</span>
+                        </div>
+                    </div>
+                </a>
             </article>
 
             <article class="blog-card" data-category="ia">
-                <div class="blog-card-image">
-                    <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=600&h=400&fit=crop" alt="Machine Learning">
-                </div>
-                <div class="blog-card-content">
-                    <span class="blog-card-category">IA</span>
-                    <h3 class="blog-card-title">Machine Learning explicado para no técnicos</h3>
-                    <div class="blog-card-meta">
-                        <span class="blog-card-date">Ene 2, 2026</span>
-                        <span class="blog-card-read">6 min</span>
+                <a href="articulo.php?slug=machine-learning">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=600&h=400&fit=crop" alt="Machine Learning" loading="lazy" width="600" height="400">
                     </div>
-                </div>
+                    <div class="blog-card-content">
+                        <span class="blog-card-category">IA</span>
+                        <h3 class="blog-card-title">Machine Learning explicado para no técnicos</h3>
+                        <div class="blog-card-meta">
+                            <span class="blog-card-date">Ene 2, 2026</span>
+                            <span class="blog-card-read">6 min</span>
+                        </div>
+                    </div>
+                </a>
             </article>
 
             <article class="blog-card" data-category="automation">
-                <div class="blog-card-image">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="Equipo trabajando">
-                </div>
-                <div class="blog-card-content">
-                    <span class="blog-card-category">Automatización</span>
-                    <h3 class="blog-card-title">Caso real: 70% menos tiempo en tareas repetitivas</h3>
-                    <div class="blog-card-meta">
-                        <span class="blog-card-date">Dic 28, 2025</span>
-                        <span class="blog-card-read">4 min</span>
+                <a href="articulo.php?slug=caso-real-tp">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="Equipo trabajando" loading="lazy" width="600" height="400">
                     </div>
-                </div>
+                    <div class="blog-card-content">
+                        <span class="blog-card-category">Automatización</span>
+                        <h3 class="blog-card-title">Caso real: 70% menos tiempo en tareas repetitivas</h3>
+                        <div class="blog-card-meta">
+                            <span class="blog-card-date">Dic 28, 2025</span>
+                            <span class="blog-card-read">4 min</span>
+                        </div>
+                    </div>
+                </a>
             </article>
 
             <article class="blog-card" data-category="tips">
-                <div class="blog-card-image">
-                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=400&fit=crop" alt="Estrategia">
-                </div>
-                <div class="blog-card-content">
-                    <span class="blog-card-category">Tips</span>
-                    <h3 class="blog-card-title">Guía: Prepara tu empresa para la era de la IA</h3>
-                    <div class="blog-card-meta">
-                        <span class="blog-card-date">Dic 22, 2025</span>
-                        <span class="blog-card-read">8 min</span>
+                <a href="articulo.php?slug=guia-ia">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&h=400&fit=crop" alt="Estrategia" loading="lazy" width="600" height="400">
                     </div>
-                </div>
+                    <div class="blog-card-content">
+                        <span class="blog-card-category">Tips</span>
+                        <h3 class="blog-card-title">Guía: Prepara tu empresa para la era de la IA</h3>
+                        <div class="blog-card-meta">
+                            <span class="blog-card-date">Dic 22, 2025</span>
+                            <span class="blog-card-read">8 min</span>
+                        </div>
+                    </div>
+                </a>
             </article>
         </div>
 
@@ -220,15 +247,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="blog-cta-section">
-        <div class="blog-cta-content">
-            <h2 class="blog-cta-title">¿Listo para transformar tu negocio?</h2>
-            <p class="blog-cta-text">Agenda una llamada gratuita y descubre cómo la IA puede ayudarte.</p>
-            <a href="index.html#contacto" class="blog-cta-btn">Agendar llamada</a>
         </div>
     </section>
 

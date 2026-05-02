@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // =============================================
     // Fade-in Animation on Scroll
     // =============================================
-    const fadeElements = document.querySelectorAll('.service-card, .value-content, .value-image-placeholder, .stat-item');
+    const fadeElements = document.querySelectorAll('.service-card, .value-content, .valor-comparativa, .value-image-placeholder, .stat-item');
     
     fadeElements.forEach(element => {
         element.classList.add('fade-in');
@@ -220,19 +220,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // =============================================
-    // Neural Network Animation Enhancement
+    // Mobile Menu Toggle
     // =============================================
-    const nodes = document.querySelectorAll('.node');
+    const navHamburger = document.getElementById('navHamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
     
-    nodes.forEach((node, index) => {
-        node.style.animationDelay = `${index * 0.3}s`;
-    });
-    
-    // =============================================
-    // Mobile Menu (if needed in future)
-    // =============================================
-    // Placeholder for mobile menu toggle functionality
-    // Can be expanded based on requirements
+    if (navHamburger && mobileMenu) {
+        navHamburger.addEventListener('click', () => {
+            navHamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navHamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
     
     // =============================================
     // Dark Mode Toggle
