@@ -10,6 +10,7 @@ if (!isset($scripts_pagina) || !is_array($scripts_pagina)) {
 	$scripts_pagina = [];
 }
 ?>
+<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
 <script src="script.js"></script>
 <?php foreach ($scripts_pagina as $script_pagina): ?>
 	<script src="<?php echo htmlspecialchars($script_pagina, ENT_QUOTES, 'UTF-8'); ?>"></script>

@@ -5,8 +5,22 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // =============================================
+    // Splitting.js Initialization
+    // =============================================
+    if (typeof Splitting !== 'undefined') {
+        Splitting();
+        const cinematicTitle = document.querySelector('.anim-cinematic');
+        if (cinematicTitle) {
+            setTimeout(() => {
+                cinematicTitle.classList.add('active');
+            }, 100);
+        }
+    }
+    
+    // =============================================
     // Scroll-up Reveal Navigation (Simple)
     // =============================================
+    
     const navbar = document.getElementById('navbar');
     let lastScrollY = window.scrollY;
     

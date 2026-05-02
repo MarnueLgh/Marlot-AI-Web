@@ -50,6 +50,10 @@ if (!isset($hojas_estilo) || !is_array($hojas_estilo)) {
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
 	</noscript>
 
+	<!-- Splitting.js CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+	<link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+
 	<!-- Main CSS -->
 	<link rel="stylesheet" href="css/styles.css">
 	<?php foreach ($hojas_estilo as $hoja_estilo): ?>

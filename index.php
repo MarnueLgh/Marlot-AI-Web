@@ -22,7 +22,7 @@ require __DIR__ . '/includes/nav.php';
 		<img src="assets/images/hero/hero-mountain-grok.jpg" alt="Hero Background" fetchpriority="high" decoding="async">
 	</div>
 	<div class="hero-content">
-		<h1 class="hero-title">Inteligencia artificial<br>para tu negocio.</h1>
+		<h1 class="hero-title anim-cinematic" data-splitting>Inteligencia artificial<br>para tu negocio.</h1>
 		<a href="#servicios" class="hero-btn">CONOCE NUESTRAS SOLUCIONES</a>
 	</div>
 	<div class="hero-overlay"></div>
