@@ -3,6 +3,8 @@
    Inspired by Rhode Skin aesthetic
    ============================================= */
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
 /* CSS Variables */
 :root {
     --color-primary: #F25C69;
@@ -1937,7 +1939,7 @@ html.js-enabled .anim-cinematic:not(.active) {
 
 .footer-top {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
     gap: 80px;
     max-width: 1200px;
     margin: 0 auto 60px;
@@ -2017,8 +2019,13 @@ html.js-enabled .anim-cinematic:not(.active) {
 
 .footer-links {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 40px;
+    min-width: 0;
+}
+
+.footer-column {
+    min-width: 0;
 }
 
 .footer-column h4 {
@@ -2056,50 +2063,6 @@ html.js-enabled .anim-cinematic:not(.active) {
     color: var(--color-primary);
     display: inline-block;
     margin-top: 8px;
-}
-
-/* Social Icons */
-.social-icons {
-    display: grid;
-    grid-template-columns: repeat(2, 42px);
-    gap: 10px;
-}
-
-.social-icons li {
-    margin-bottom: 0;
-}
-
-.social-icons a,
-.share-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 42px;
-    height: 42px;
-    flex: 0 0 42px;
-    color: var(--color-text-dark);
-    border-radius: 50%;
-    background-color: var(--color-bg-alt);
-    border: 1px solid var(--color-border);
-    text-decoration: none;
-    transition: color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
-}
-
-.social-icons a:hover,
-.share-btn:hover {
-    color: var(--color-white);
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
-    transform: translateY(-2px);
-}
-
-.social-icons svg,
-.share-btn svg {
-    display: block;
-    width: 19px;
-    height: 19px;
-    flex: 0 0 19px;
-    fill: currentColor;
 }
 
 .footer-bottom {
@@ -2551,14 +2514,12 @@ section[id] {
     opacity: 0.6;
 }
 
-[data-theme="dark"] .social-icons a,
 [data-theme="dark"] .share-btn {
     color: var(--color-white);
     background-color: rgba(255, 255, 255, 0.08);
     border-color: rgba(255, 255, 255, 0.16);
 }
 
-[data-theme="dark"] .social-icons a:hover,
 [data-theme="dark"] .share-btn:hover {
     color: var(--color-white);
     background-color: var(--color-primary);
@@ -3462,8 +3423,6 @@ body,
    Editorial, minimalist, and elegant layout
    ============================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
-
 /* Base Layout */
 .article-page {
     background-color: var(--color-bg);
@@ -3473,6 +3432,8 @@ body,
 
 .article-main {
     max-width: 1000px; /* Ancho ajustado para mejor legibilidad */
+    width: 100%;
+    box-sizing: border-box;
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -3481,6 +3442,7 @@ body,
 .article-header {
     text-align: center;
     margin-bottom: 60px;
+    width: 100%;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -3504,14 +3466,18 @@ body,
     margin-bottom: 30px;
     font-weight: 400;
     letter-spacing: -1px;
+    max-width: 100%;
+    overflow-wrap: break-word;
 }
 
 .article-subtitle {
     font-size: 18px;
     color: var(--color-text);
+    width: 100%;
     max-width: 650px;
     margin: 0 auto 30px;
     line-height: 1.6;
+    overflow-wrap: break-word;
 }
 
 .article-meta {
@@ -3544,7 +3510,7 @@ body,
 /* Content Layouts */
 .article-layout-editorial {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
     gap: 80px;
     align-items: start;
 }
@@ -3569,12 +3535,14 @@ body,
     line-height: 1.1;
     margin-bottom: 24px;
     font-weight: 400;
+    text-align: left;
 }
 
 .article-sidebar-text {
     font-size: 14px;
     line-height: 1.7;
     color: var(--color-text);
+    text-align: justify;
 }
 
 /* Compartir articulo */
@@ -3596,12 +3564,47 @@ body,
     gap: 10px;
 }
 
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    color: var(--color-text-dark);
+    background-color: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+    margin-bottom: 10px;
+}
+
+.share-btn:hover {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.share-btn svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+    fill: currentColor;
+}
+
 /* Main Body Text (Right Column or Center) */
 .article-body-text {
     font-size: 18px;
     line-height: 1.8;
+    text-align: justify;
     color: var(--color-text-dark);
     font-weight: 300;
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: break-word;
 }
 
 .article-body-text p {
@@ -3614,6 +3617,9 @@ body,
     margin: 80px 0 30px;
     line-height: 1.2;
     font-weight: 400;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    text-align: left;
 }
 
 .article-body-text h3 {
@@ -3715,9 +3721,22 @@ body,
 
 .article-image-split {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 30px;
     margin: 70px 0;
+    max-width: 100%;
+}
+
+.article-image-split .split-col {
+    min-width: 0;
+}
+
+.article-image-split img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
 }
 
 /* Author block */
@@ -3803,6 +3822,47 @@ body,
     
     .drop-cap::first-letter {
         font-size: 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    .article-page {
+        padding-top: 120px;
+    }
+
+    .article-main {
+        padding: 0 24px;
+    }
+
+    .article-header {
+        margin-bottom: 40px;
+    }
+
+    .article-title {
+        font-size: 34px;
+        line-height: 1.08;
+        letter-spacing: 0;
+    }
+
+    .article-subtitle {
+        font-size: 16px;
+    }
+
+    .article-hero-img {
+        min-height: 280px;
+    }
+
+    .article-body-text {
+        font-size: 16px;
+    }
+
+    .article-body-text h2 {
+        font-size: 31px;
+    }
+
+    .article-quote {
+        font-size: 28px;
+        padding: 0 12px;
     }
 }
 
