@@ -67,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	animar_parallax_hero();
 	animar_stats();
 	animar_hover_servicios();
+	inicializar_acordeon_servicios();
 
 	/* --- Newsletter form --- */
 	iniciar_newsletter();
@@ -138,3 +139,108 @@ window.addEventListener('pageshow', function (evento) {
 		ScrollTrigger.refresh(true);
 	}
 });
+
+
+// NEW
+
+
+/*
+ * Autor: MarnueLgh
+ * Fecha: 02/05/2026
+ * Versión: 1.0
+ * Descripción: Lógica del acordeón vertical de servicios con GSAP y Lenis.
+ *              Requiere GSAP y Lenis cargados desde includes/scripts.php.
+ *              Agregar en js/main.js.
+ */
+
+// ── Acordeón de Servicios ────────────────────────────────────
+
+// Descripción: Inicializa el acordeón vertical de servicios con animaciones GSAP.
+function inicializar_acordeon_servicios() {
+	const lista_items = document.querySelectorAll('.servicios-item');
+	const contenedor_servicios = document.getElementById('servicios_contenedor');
+
+	if (!lista_items.length || !contenedor_servicios) return;
+
+	lista_items.forEach(item_actual => {
+		const cabecera_actual = item_actual.querySelector('.servicios-cabecera');
+		const contenido_actual = item_actual.querySelector('.servicios-contenido');
+		const elementos_internos = item_actual.querySelectorAll('.servicios-info > *');
+
+		// Estado inicial oculto para elementos internos
+		gsap.set(elementos_internos, { y: 20, opacity: 0 });
+
+		cabecera_actual.addEventListener('click', () => {
+			const esta_abierto = item_actual.classList.contains('item-abierto');
+
+			// Cerrar todos los items
+			cerrar_todos_items(lista_items);
+
+			// Si el clickeado estaba cerrado, abrirlo
+			if (!esta_abierto) {
+				abrir_item(item_actual, contenido_actual, elementos_internos, contenedor_servicios);
+			} else {
+				contenedor_servicios.classList.remove('con-activo');
+			}
+		});
+	});
+}
+
+// Descripción: Cierra todos los items del acordeón.
+// Parámetros: lista_items (NodeList)
+function cerrar_todos_items(lista_items) {
+	lista_items.forEach(item => {
+		item.classList.remove('item-abierto');
+
+		const contenido = item.querySelector('.servicios-contenido');
+		const imagen = item.querySelector('.servicios-imagen');
+
+		gsap.to(contenido, {
+			height: 0,
+			duration: 0.5,
+			ease: 'power3.inOut',
+		});
+
+		gsap.to(imagen, {
+			scale: 1,
+			duration: 0.5,
+			ease: 'power3.inOut',
+		});
+	});
+}
+
+// Descripción: Abre un item del acordeón con animación GSAP.
+// Parámetros: item (Element), contenido (Element), elementos_internos (NodeList), contenedor (Element)
+function abrir_item(item, contenido, elementos_internos, contenedor) {
+	item.classList.add('item-abierto');
+	contenedor.classList.add('con-activo');
+
+	const imagen = item.querySelector('.servicios-imagen');
+	const escala_imagen = window.innerWidth > 768 ? 3 : 1.5;
+
+	// Expandir contenido
+	gsap.to(contenido, {
+		height: 'auto',
+		duration: 0.6,
+		ease: 'power3.inOut',
+	});
+
+	// Agrandar imagen
+	gsap.to(imagen, {
+		scale: escala_imagen,
+		duration: 0.6,
+		ease: 'power3.inOut',
+	});
+
+	// Animar elementos internos en cascada
+	gsap.set(elementos_internos, { y: 20, opacity: 0 });
+
+	gsap.to(elementos_internos, {
+		y: 0,
+		opacity: 1,
+		duration: 0.5,
+		stagger: 0.1,
+		ease: 'power2.out',
+		delay: 0.2,
+	});
+}

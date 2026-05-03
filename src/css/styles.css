@@ -300,6 +300,157 @@ html.js-enabled .anim-cinematic:not(.active) {
     }
 }
 
+
+/*
+ * Autor: MarnueLgh
+ * Fecha: 02/05/2026
+ * Versión: 1.0
+ * Descripción: Estilos del acordeón vertical de servicios.
+ *              Agregar en css/style.css en su sección correspondiente.
+ *              Las media queries van al final del archivo.
+ */
+
+/* ── Sección: Servicios ──────────────────────────── */
+
+.servicios {
+    background-color: #F5F3F0;
+    padding: 5rem 0;
+}
+
+.servicios-contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.servicios-item {
+    border-bottom: 1px solid #d1cfc9;
+    transition: opacity 0.4s ease, filter 0.4s ease;
+}
+
+.servicios-item:first-child {
+    border-top: 1px solid #d1cfc9;
+}
+
+/* Opacidad en items inactivos cuando hay uno abierto */
+.servicios-contenedor.con-activo .servicios-item:not(.item-abierto) {
+    opacity: 0.3;
+    filter: grayscale(100%);
+}
+
+.servicios-cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.servicios-cabecera:hover {
+    opacity: 0.7;
+}
+
+.servicios-imagen {
+    width: 70px;
+    height: 70px;
+    border-radius: 14px;
+    margin-left: 30px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transform-origin: top right;
+    position: relative;
+    z-index: 2;
+}
+
+.servicios-grupo-texto {
+    display: flex;
+    align-items: baseline;
+}
+
+.servicios-titulo {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin: 0;
+    line-height: 1;
+    color: #181818;
+}
+
+/* ── Contenido interior ──────────────────────────── */
+
+.servicios-contenido {
+    height: 0;
+    overflow: hidden;
+}
+
+.servicios-info {
+    padding-right: 240px;
+    padding-bottom: 45px;
+    max-width: 750px;
+}
+
+.servicios-subtitulo {
+    font-size: 1.2rem;
+    color: #333333;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.servicios-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.servicios-lista li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    color: #4a4a4a;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.servicios-lista li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #F25C69;
+    font-size: 1.5rem;
+    line-height: 1;
+    top: -3px;
+}
+
+/* ── Media Queries: Servicios ────────────────────── */
+
+@media (max-width: 768px) {
+    .servicios-imagen {
+        width: 55px;
+        height: 55px;
+        margin-left: 20px;
+        border-radius: 10px;
+    }
+
+    .servicios-info {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 10px;
+    }
+
+    .servicios-grupo-texto {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .servicios-cabecera {
+        padding: 20px 0;
+    }
+}
+
 /* =============================================
    Services Section - Solution Cards
    ============================================= */

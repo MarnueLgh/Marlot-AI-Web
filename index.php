@@ -29,7 +29,10 @@ require __DIR__ . '/includes/nav.php';
 </section>
 
 <!-- Services Section -->
-<section class="services" id="servicios">
+
+<?php include('includes/acordeon_servicios.php'); ?>
+
+<!-- <section class="services" id="servicios">
 	<div class="services-intro">
 		<p class="services-label">SOLUCIONES IA</p>
 		<h2 class="services-title">Servicios diseñados para impacto real</h2>
@@ -145,7 +148,7 @@ require __DIR__ . '/includes/nav.php';
 			</div>
 		</article>
 	</div>
-</section>
+</section> -->
 
 <section class="value-section" id="nosotros">
 	<div class="value-container">
