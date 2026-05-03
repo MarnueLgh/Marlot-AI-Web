@@ -36,6 +36,7 @@ import {
 } from './modulos/navegacion.js';
 import { iniciar_tema } from './modulos/tema.js';
 import { iniciar_acordeon_metricas } from './modulos/acordeon_metricas.js';
+import { iniciar_diagnostico_oportunidades } from './modulos/diagnostico_oportunidades.js';
 
 /* =============================================
    Inicializacion principal
@@ -61,6 +62,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	/* --- Acordeon de metricas --- */
 	iniciar_acordeon_metricas();
+
+	/* --- Diagnostico de oportunidades IA --- */
+	iniciar_diagnostico_oportunidades();
 
 	/* --- Animaciones GSAP ScrollTrigger --- */
 	animar_fade_in();
@@ -128,7 +132,7 @@ function validar_email(email) {
    ============================================= */
 window.addEventListener('pageshow', function (evento) {
 	if (evento.persisted) {
-		const selectores_animados = '.service-card, .value-content, .valor-comparativa, .value-image-placeholder, .stat-item';
+		const selectores_animados = '.service-card, .oportunidades-contenido, .oportunidades-panel, .value-content, .valor-comparativa, .value-image-placeholder, .stat-item';
 		document.querySelectorAll(selectores_animados).forEach(function (el) {
 			el.style.removeProperty('visibility');
 			el.style.removeProperty('opacity');

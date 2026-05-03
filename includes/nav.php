@@ -18,7 +18,7 @@ $es_blog = $pagina_actual === 'blog';
 	<div class="nav-container">
 		<div class="nav-left">
 			<a href="<?php echo $es_home ? '#servicios' : 'index.php#servicios'; ?>" class="nav-link">SERVICIOS</a>
-			<a href="<?php echo $es_home ? '#nosotros' : 'index.php#nosotros'; ?>" class="nav-link">NOSOTROS</a>
+			<a href="<?php echo $es_home ? '#nosotros' : 'index.php#nosotros'; ?>" class="nav-link">OPORTUNIDADES</a>
 			<a href="<?php echo $es_home ? '#casos' : 'index.php#casos'; ?>" class="nav-link">CASOS</a>
 		</div>
 		<div class="nav-logo">
@@ -42,7 +42,7 @@ $es_blog = $pagina_actual === 'blog';
 <!-- Mobile Menu Drawer -->
 <div class="mobile-menu" id="mobileMenu">
 	<a href="<?php echo $es_home ? '#servicios' : 'index.php#servicios'; ?>">SERVICIOS</a>
-	<a href="<?php echo $es_home ? '#nosotros' : 'index.php#nosotros'; ?>">NOSOTROS</a>
+	<a href="<?php echo $es_home ? '#nosotros' : 'index.php#nosotros'; ?>">OPORTUNIDADES</a>
 	<a href="<?php echo $es_home ? '#casos' : 'index.php#casos'; ?>">CASOS</a>
 	<a href="<?php echo $es_home ? '#contacto' : 'index.php#contacto'; ?>">CONTACTO</a>
 	<a href="blog.php">BLOG</a>

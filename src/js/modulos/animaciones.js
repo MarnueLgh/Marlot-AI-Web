@@ -12,7 +12,7 @@ import { gsap, ScrollTrigger } from './lenis_init.js';
  */
 export function animar_fade_in() {
 	const elementos = document.querySelectorAll(
-		'.service-card, .value-content, .valor-comparativa, .value-image-placeholder, .stat-item'
+		'.service-card, .oportunidades-contenido, .oportunidades-panel, .value-content, .valor-comparativa, .value-image-placeholder, .stat-item'
 	);
 
 	elementos.forEach((elemento, indice) => {

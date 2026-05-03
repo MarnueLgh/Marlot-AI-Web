@@ -150,57 +150,7 @@ require __DIR__ . '/includes/nav.php';
 	</div>
 </section> -->
 
-<section class="value-section" id="nosotros">
-	<div class="value-container">
-		<div class="value-content">
-			<p class="value-label">IA PARA PYMES</p>
-			<h2 class="value-title">Transforma operaciones sin crecer costos</h2>
-			<p class="value-description">Implementamos automatización aplicada a ventas, operaciones y soporte con foco en impacto real desde las primeras semanas.</p>
-			<ul class="value-points">
-				<li>Implementación por fases, sin frenar tu operación actual</li>
-				<li>Integración con tus canales y herramientas existentes</li>
-				<li>Acompañamiento humano para tu equipo en cada etapa</li>
-			</ul>
-			<div class="value-actions">
-				<a href="#contacto" class="value-btn">SOLICITAR DEMO</a>
-				<a href="#casos" class="value-link">VER CASOS</a>
-			</div>
-		</div>
-		<div class="value-image">
-			<article class="valor-comparativa" aria-label="Comparativa antes y después de implementar soluciones de IA">
-				<div class="valor-grid">
-					<section class="valor-columna">
-						<h3 class="valor-estado">Antes</h3>
-						<ul class="valor-lista">
-							<li class="valor-item valor-alerta">Tareas manuales repetitivas en varias areas</li>
-							<li class="valor-item valor-alerta">Datos dispersos en hojas y chats</li>
-							<li class="valor-item valor-alerta">Respuestas lentas a clientes y equipo</li>
-						</ul>
-					</section>
-					<section class="valor-columna">
-						<h3 class="valor-estado valor-exito">Después</h3>
-						<ul class="valor-lista">
-							<li class="valor-item valor-exito">Flujos automatizados para tareas clave</li>
-							<li class="valor-item valor-exito">Información centralizada y accionable</li>
-							<li class="valor-item valor-exito">Atención asistida 24/7 con contexto</li>
-						</ul>
-					</section>
-				</div>
-
-				<div class="valor-tiempo">
-					<span class="valor-texto">Tiempo de implementación estimado</span>
-					<strong class="valor-dato">2 a 4 semanas</strong>
-				</div>
-
-				<div class="valor-chips">
-					<span class="valor-chip">Sin codigo</span>
-					<span class="valor-chip">Escalable</span>
-					<span class="valor-chip">Soporte continuo</span>
-				</div>
-			</article>
-		</div>
-	</div>
-</section>
+<?php include('includes/diagnostico_oportunidades.php'); ?>
 
 <?php include('includes/acordeon_metricas.php'); ?>
 
