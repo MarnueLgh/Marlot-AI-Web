@@ -4,7 +4,7 @@
     "name": "lenis_init"
   },
   "src/js/blog.js": {
-    "file": "assets/blog-BVJS348A.js",
+    "file": "assets/blog-Bb7hI6hs.js",
     "name": "blog",
     "src": "src/js/blog.js",
     "isEntry": true,
@@ -13,7 +13,7 @@
     ]
   },
   "src/js/main.js": {
-    "file": "assets/main-CpNRf7Bz.js",
+    "file": "assets/main-BXFpS3P0.js",
     "name": "main",
     "src": "src/js/main.js",
     "isEntry": true,
@@ -21,7 +21,7 @@
       "_lenis_init-DwR1Ux1f.js"
     ],
     "css": [
-      "assets/main-DPWfotKr.css"
+      "assets/main-Dc5a0eFX.css"
     ]
   }
 }

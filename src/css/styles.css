@@ -2020,12 +2020,20 @@ html.js-enabled .anim-cinematic:not(.active) {
 .footer-links {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 40px;
+    gap: 36px;
     min-width: 0;
 }
 
-.footer-column {
+.footer-column,
+.footer-columna {
     min-width: 0;
+}
+
+.footer-column ul,
+.footer-social-lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .footer-column h4 {
@@ -2045,10 +2053,68 @@ html.js-enabled .anim-cinematic:not(.active) {
     font-size: 14px;
     color: var(--color-text);
     transition: color var(--transition-fast);
+    overflow-wrap: anywhere;
 }
 
 .footer-column ul li a:hover {
     color: var(--color-primary);
+}
+
+.footer-social-lista {
+    display: grid;
+    gap: 12px;
+}
+
+.footer-social-lista li {
+    margin-bottom: 0;
+}
+
+.footer-social-enlace {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 100%;
+    font-size: 14px;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-social-enlace:hover {
+    color: var(--color-primary);
+}
+
+.footer-social-icono {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+    color: var(--color-text-dark);
+    background-color: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    transition: color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.footer-social-enlace:hover .footer-social-icono {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.footer-social-icono svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.footer-social-texto {
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
 .support-text {
@@ -2063,6 +2129,7 @@ html.js-enabled .anim-cinematic:not(.active) {
     color: var(--color-primary);
     display: inline-block;
     margin-top: 8px;
+    overflow-wrap: anywhere;
 }
 
 .footer-bottom {
@@ -2093,6 +2160,18 @@ html.js-enabled .anim-cinematic:not(.active) {
     
     .services-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1199px) {
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 28px;
     }
 }
 
@@ -2140,13 +2219,8 @@ html.js-enabled .anim-cinematic:not(.active) {
         grid-template-columns: 1fr;
     }
     
-    .footer-top {
-        grid-template-columns: 1fr;
-        gap: 60px;
-    }
-    
     .footer-links {
-        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
     }
 }
 
@@ -2256,14 +2330,23 @@ html.js-enabled .anim-cinematic:not(.active) {
     .footer {
         padding: 60px 20px 30px;
     }
+
+    .footer-top {
+        gap: 40px;
+    }
     
     .footer-links {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px 24px;
     }
     
     .newsletter-form {
         flex-direction: column;
+    }
+
+    .newsletter-input,
+    .newsletter-btn {
+        width: 100%;
     }
 }
 
@@ -2351,9 +2434,46 @@ html.js-enabled .anim-cinematic:not(.active) {
     .large-logo {
         letter-spacing: -4px;
     }
+
+    .footer {
+        padding: 52px 16px 28px;
+    }
     
     .footer-links {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 16px;
+    }
+
+    .footer-column h4 {
+        font-size: 11px;
+        letter-spacing: 1px;
+        margin-bottom: 14px;
+    }
+
+    .footer-column ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-column ul li a,
+    .footer-social-enlace,
+    .support-text,
+    .support-email {
+        font-size: 13px;
+    }
+
+    .footer-social-enlace {
+        gap: 8px;
+    }
+
+    .footer-social-icono {
+        width: 30px;
+        height: 30px;
+        flex: 0 0 30px;
+    }
+
+    .footer-social-icono svg {
+        width: 14px;
+        height: 13px;
     }
     
     .bento-grid {

@@ -14,7 +14,7 @@ $es_home = $pagina_actual === 'index';
 $es_blog = $pagina_actual === 'blog';
 ?>
 <!-- Navigation -->
-<nav class="navbar<?php echo $es_blog ? ' navbar-blog' : ''; ?>" id="navbar">
+<nav class="navbar" id="navbar">
 	<div class="nav-container">
 		<div class="nav-left">
 			<a href="<?php echo $es_home ? '#servicios' : 'index.php#servicios'; ?>" class="nav-link">SERVICIOS</a>

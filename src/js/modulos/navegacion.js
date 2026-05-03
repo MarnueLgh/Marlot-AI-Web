@@ -6,7 +6,7 @@
  */
 
 /**
- * Navbar hide/show al hacer scroll + estilo scrolled
+ * Navbar hide/show al hacer scroll
  */
 export function iniciar_navbar_scroll() {
 	const navbar = document.getElementById('navbar');
@@ -16,12 +16,6 @@ export function iniciar_navbar_scroll() {
 
 	window.addEventListener('scroll', () => {
 		const scroll_actual_y = window.scrollY;
-
-		if (scroll_actual_y > 100) {
-			navbar.classList.add('scrolled');
-		} else {
-			navbar.classList.remove('scrolled');
-		}
 
 		if (scroll_actual_y > 150) {
 			if (scroll_actual_y > ultimo_scroll_y) {

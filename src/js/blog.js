@@ -129,13 +129,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 
-	// =============================================
-	// Navbar Blog (siempre scrolled)
-	// =============================================
-	const navbar = document.getElementById('navbar');
-	if (navbar && navbar.classList.contains('navbar-blog')) {
-		navbar.classList.add('scrolled');
-	}
 });
 
 /* =============================================
