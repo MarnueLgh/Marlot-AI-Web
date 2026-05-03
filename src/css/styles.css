@@ -40,10 +40,6 @@
     box-sizing: border-box;
 }
 
-html {
-    /* scroll-behavior: smooth — deshabilitado, Lenis controla el scroll */
-}
-
 /* Lenis Smooth Scroll */
 html.lenis, html.lenis body {
     height: auto;

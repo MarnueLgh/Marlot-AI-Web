@@ -39,7 +39,7 @@
 					<div class="servicios-grupo-texto">
 						<h2 class="servicios-titulo">Gestión de datos</h2>
 					</div>
-					<div class="servicios-imagen" style="background-image: url('https://images.unsplash.com/photo-1550684376-efcbd6e3f031?q=80&w=200&auto=format&fit=crop');"></div>
+					<div class="servicios-imagen" style="background-image: url('https://images.unsplash.com/photo-1546453667-8a8d2d07bc20?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
 				</div>
 				<div class="servicios-contenido">
 					<div class="servicios-info">
