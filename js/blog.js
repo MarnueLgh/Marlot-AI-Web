@@ -166,14 +166,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // =============================================
-    // Navbar Scroll Behavior for Blog
-    // =============================================
-    const navbar = document.getElementById('navbar');
-    
-    if (navbar && navbar.classList.contains('navbar-blog')) {
-        // Blog page always has solid navbar
-        navbar.classList.add('scrolled');
-    }
-    
 });

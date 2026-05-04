@@ -1,0 +1,4 @@
+interface:
+  display_name: "Convenciones Marlot"
+  short_description: "Convenciones del proyecto Marlot AI"
+  default_prompt: "Usa las convenciones del proyecto Marlot AI para trabajar con PHP modular, Vite, CSS y JavaScript."

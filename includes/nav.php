@@ -29,7 +29,7 @@ $es_blog = $pagina_actual === 'blog';
 		<div class="nav-right">
 			<a href="<?php echo $es_home ? '#contacto' : 'index.php#contacto'; ?>" class="nav-link">CONTACTO</a>
 			<a href="blog.php" class="nav-link<?php echo $es_blog ? ' nav-active' : ''; ?>">BLOG</a>
-			<a href="#" class="nav-link nav-cta">AGENDA UNA LLAMADA</a>
+			<a href="#" class="nav-link">AGENDA UNA LLAMADA</a>
 		</div>
 		<button class="nav-hamburger" id="navHamburger" aria-label="Abrir menu">
 			<span></span>

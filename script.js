@@ -27,13 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', () => {
         const currentScrollY = window.scrollY;
         
-        // Cambiar estilo cuando pasamos el hero
-        if (currentScrollY > 100) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-        
         // Solo aplicar hide/show después de pasar el hero
         if (currentScrollY > 150) {
             if (currentScrollY > lastScrollY) {
@@ -254,60 +247,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
-    
-    // =============================================
-    // Dark Mode Toggle
-    // =============================================
-    const themeToggle = document.getElementById('themeToggle');
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    
-    // Check for saved theme preference or use system preference
-    function getThemePreference() {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            return savedTheme;
-        }
-        return prefersDarkScheme.matches ? 'dark' : 'light';
-    }
-    
-    // Apply theme
-    function setTheme(theme) {
-        document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-    }
-    
-    // Initialize theme
-    setTheme(getThemePreference());
-    
-    // Toggle theme on button click
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            setTheme(newTheme);
-        });
-    }
-    
-    // Listen for system theme changes
-    prefersDarkScheme.addEventListener('change', (e) => {
-        if (!localStorage.getItem('theme')) {
-            setTheme(e.matches ? 'dark' : 'light');
-        }
-    });
-    
-    // =============================================
-    // Chatbot Button (placeholder for future)
-    // =============================================
-    const chatbotBtn = document.getElementById('chatbotBtn');
-    
-    if (chatbotBtn) {
-        chatbotBtn.addEventListener('click', () => {
-            // Aquí puedes agregar la lógica para abrir el chatbot
-            // Por ejemplo: document.getElementById('chatbot-container').classList.toggle('active');
-            console.log('Chatbot button clicked - Add your chatbot logic here');
-        });
-    }
-    
 });
 
 // =============================================

@@ -31,7 +31,6 @@ if (!$articulo) {
 	</main>
 	<?php
 	require __DIR__ . '/includes/footer.php';
-	require __DIR__ . '/includes/side_menu.php';
 	require __DIR__ . '/includes/scripts.php';
 	exit;
 }
@@ -49,5 +48,4 @@ require __DIR__ . '/includes/article.php';
 
 <?php
 require __DIR__ . '/includes/footer.php';
-require __DIR__ . '/includes/side_menu.php';
 require __DIR__ . '/includes/scripts.php';

@@ -170,5 +170,4 @@ require_once __DIR__ . '/includes/vite.php';
 echo vite_tags('src/js/blog.js');
 
 require __DIR__ . '/includes/footer.php';
-require __DIR__ . '/includes/side_menu.php';
 require __DIR__ . '/includes/scripts.php';

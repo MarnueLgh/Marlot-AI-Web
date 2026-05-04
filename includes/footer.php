@@ -20,11 +20,11 @@ if (!isset($ancla_footer)) {
 				<input type="email" placeholder="Email" class="newsletter-input">
 				<button type="submit" class="newsletter-btn">SUSCRIBIRSE</button>
 			</form>
-			<p class="privacy-note">Al suscribirte, aceptas nuestra <a href="#">Política de Privacidad</a>*.</p>
+			<p class="privacy-note">Al suscribirte, aceptas nuestra <a href="privacidad.php">Política de Privacidad</a>*.</p>
 		</div>
 
 		<div class="footer-links">
-			<div class="footer-column footer-columna">
+			<div class="footer-column">
 				<h4>NAVEGAR</h4>
 				<ul>
 					<li><a href="index.php#servicios">Servicios</a></li>
@@ -35,7 +35,7 @@ if (!isset($ancla_footer)) {
 				</ul>
 			</div>
 
-			<div class="footer-column footer-columna footer-social">
+			<div class="footer-column">
 				<h4>SOCIAL</h4>
 				<ul class="footer-social-lista">
 					<li>
@@ -73,18 +73,19 @@ if (!isset($ancla_footer)) {
 				</ul>
 			</div>
 
-			<div class="footer-column footer-columna">
+			<div class="footer-column">
 				<h4>OFICIAL</h4>
 				<ul>
-					<li><a href="#">Privacidad</a></li>
-					<li><a href="#">Términos</a></li>
-					<li><a href="#">Accesibilidad</a></li>
-					<li><a href="#">FAQ</a></li>
-					<li><a href="#">Contacto</a></li>
+					<li><a href="privacidad.php">Privacidad</a></li>
+					<li><a href="terminos.php">Términos</a></li>
+					<li><a href="accesibilidad.php">Accesibilidad</a></li>
+					<li><a href="faq.php">FAQ</a></li>
+					<li><a href="index.php#contacto">Contacto</a></li>
+					<li><button class="footer-cookies" type="button" data-cookie-preferencias>Gestionar cookies</button></li>
 				</ul>
 			</div>
 
-			<div class="footer-column footer-columna">
+			<div class="footer-column footer-soporte">
 				<h4>SOPORTE</h4>
 				<p class="support-text">L-V 9am - 6pm CST</p>
 				<p class="support-text">Chatbot 24/7</p>

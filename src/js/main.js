@@ -2,7 +2,7 @@
  * Autor: MarnueLgh
  * Fecha: 02/05/2026
  * Version: 2.0
- * Descripcion: Entry point principal: orquesta modulos de Lenis, GSAP, navegacion y tema.
+ * Descripcion: Entry point principal: orquesta modulos de Lenis, GSAP y navegacion.
  */
 
 /* =============================================
@@ -34,9 +34,10 @@ import {
 	iniciar_smooth_scroll_anclas,
 	iniciar_menu_movil,
 } from './modulos/navegacion.js';
-import { iniciar_tema } from './modulos/tema.js';
 import { iniciar_acordeon_metricas } from './modulos/acordeon_metricas.js';
 import { iniciar_diagnostico_oportunidades } from './modulos/diagnostico_oportunidades.js';
+import { iniciar_cookies } from './modulos/cookies.js';
+import { iniciar_faq } from './modulos/faq.js';
 
 /* =============================================
    Inicializacion principal
@@ -57,8 +58,11 @@ document.addEventListener('DOMContentLoaded', function () {
 	iniciar_smooth_scroll_anclas(lenis);
 	iniciar_menu_movil();
 
-	/* --- Tema claro/oscuro --- */
-	iniciar_tema();
+	/* --- Consentimiento de cookies --- */
+	iniciar_cookies();
+
+	/* --- Preguntas frecuentes --- */
+	iniciar_faq();
 
 	/* --- Acordeon de metricas --- */
 	iniciar_acordeon_metricas();
@@ -75,14 +79,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	/* --- Newsletter form --- */
 	iniciar_newsletter();
-
-	/* --- Chatbot placeholder --- */
-	const boton_chatbot = document.getElementById('chatbotBtn');
-	if (boton_chatbot) {
-		boton_chatbot.addEventListener('click', () => {
-			console.log('Chatbot button clicked');
-		});
-	}
 });
 
 /* =============================================
