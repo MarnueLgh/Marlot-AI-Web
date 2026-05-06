@@ -10,6 +10,12 @@ if (!isset($ancla_footer)) {
 	$ancla_footer = '';
 }
 ?>
+
+<!-- Sección: Logo Footer -->
+<section class="logo-section">
+	<div class="large-logo"><img src="assets/images/footer-logo-marlot.svg" alt="Marlot AI" loading="lazy" decoding="async" width="1200" height="300"></div>
+</section>
+
 <!-- Footer -->
 <footer class="footer"<?php echo $ancla_footer !== '' ? ' id="' . htmlspecialchars($ancla_footer, ENT_QUOTES, 'UTF-8') . '"' : ''; ?>>
 	<div class="footer-top">

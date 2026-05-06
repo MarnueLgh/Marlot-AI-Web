@@ -20,9 +20,8 @@ require __DIR__ . '/includes/nav.php';
 
 <main class="legal-pagina faq-pagina">
 	<section class="legal-hero">
-		<span class="legal-etiqueta">Centro de ayuda</span>
 		<h1 class="legal-titulo">Preguntas Frecuentes</h1>
-		<p class="legal-resumen">Respuestas rápidas sobre Marlot AI, nuestros servicios, precios, contratación, privacidad y forma de trabajo.</p>
+		<p class="legal-resumen">Explora nuestro centro de ayuda diseñado para resolver tus dudas de manera ágil y eficiente. Aquí hemos recopilado las preguntas más frecuentes sobre Marlot AI, cubriendo desde el funcionamiento de nuestros servicios de inteligencia artificial y estructuras de precios, hasta detalles específicos sobre el proceso de contratación, la protección de tus datos personales y nuestra forma de trabajo colaborativa.</p>
 		<p class="legal-fecha">Última actualización: mayo de 2025</p>
 	</section>
 

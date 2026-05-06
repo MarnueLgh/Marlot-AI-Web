@@ -2762,44 +2762,36 @@ section[id] {
 /* =============================================
    Zoom Parallax Section
    ============================================= */
-.parallax-section {
-    background-color: var(--color-bg);
-}
-
-.parallax-intro {
-    text-align: center;
-    padding: 100px 40px 60px;
-    background-color: var(--color-bg);
-}
-
-.parallax-title {
-    font-size: 48px;
-    font-weight: 600;
-    color: var(--color-text-dark);
-    letter-spacing: -2px;
-    margin-bottom: 16px;
-}
-
-.parallax-subtitle {
-    font-size: 18px;
-    color: var(--color-text);
-}
-
-.zoom-parallax-container {
-    height: 300vh;
+.parallax-seccion {
     position: relative;
-    background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-alt) 50%, var(--color-bg) 100%);
+    height: 300vh;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(242, 92, 105, 0.18), transparent 34%),
+        linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-alt) 48%, var(--color-bg) 100%);
 }
 
-.parallax-sticky {
+.parallax-contenedor {
     position: sticky;
     top: 0;
     height: 100vh;
     overflow: hidden;
-    background: var(--color-bg-alt);
 }
 
-.parallax-image-wrapper {
+.parallax-contenedor::before {
+    content: '';
+    position: absolute;
+    top: -45%;
+    left: 50%;
+    width: 120vmin;
+    height: 120vmin;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.45), transparent 50%);
+    filter: blur(30px);
+    pointer-events: none;
+}
+
+.parallax-capa {
     position: absolute;
     top: 0;
     left: 0;
@@ -2808,98 +2800,74 @@ section[id] {
     display: flex;
     align-items: center;
     justify-content: center;
-    will-change: transform;
-    /* Start scaled up to show mosaic */
+    pointer-events: none;
     transform-origin: center center;
+    backface-visibility: hidden;
+    will-change: transform;
 }
 
-.parallax-image {
+.parallax-elemento {
     position: relative;
-    border-radius: 20px;
+    width: 25vw;
+    height: 25vh;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-    transition: box-shadow 0.3s ease;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    background-color: var(--color-bg-alt);
+    box-shadow: 0 28px 60px rgba(61, 61, 61, 0.24);
 }
 
-.parallax-image img {
+.parallax-imagen {
     width: 100%;
     height: 100%;
+    display: block;
     object-fit: cover;
 }
 
-/* Center image (main) - Hero image */
-.parallax-center {
-    width: 28vw;
-    height: 32vh;
-}
-
-/* Positioned images - Adjusted for better mosaic layout */
-[data-position="top-left"] .parallax-image {
-    position: absolute;
-    top: 8vh;
-    left: 8vw;
-    width: 22vw;
-    height: 38vh;
-    background: linear-gradient(135deg, #a8e6cf 0%, #88d8b0 100%);
-}
-
-[data-position="top-right"] .parallax-image {
-    position: absolute;
-    top: 5vh;
-    right: 12vw;
-    left: auto;
-    width: 28vw;
-    height: 22vh;
-}
-
-[data-position="bottom-left"] .parallax-image {
-    position: absolute;
-    top: auto;
-    bottom: 8vh;
-    left: 10vw;
+.parallax-capa[data-capa="1"] .parallax-elemento {
     width: 26vw;
-    height: 22vh;
+    height: 28vh;
 }
 
-[data-position="bottom-right"] .parallax-image {
-    position: absolute;
-    top: auto;
-    bottom: 12vh;
-    right: 8vw;
-    left: auto;
-    width: 22vw;
-    height: 26vh;
+.parallax-capa[data-capa="2"] .parallax-elemento {
+    top: -30vh;
+    left: 5vw;
+    width: 35vw;
+    height: 30vh;
 }
 
-[data-position="center-left"] .parallax-image {
-    position: absolute;
-    top: 38vh;
-    left: 6vw;
-    width: 18vw;
-    height: 24vh;
+.parallax-capa[data-capa="3"] .parallax-elemento {
+    top: -10vh;
+    left: -25vw;
+    width: 20vw;
+    height: 45vh;
 }
 
-[data-position="center-right"] .parallax-image {
-    position: absolute;
-    top: 32vh;
-    right: 6vw;
-    left: auto;
-    width: 16vw;
-    height: 20vh;
+.parallax-capa[data-capa="4"] .parallax-elemento {
+    left: 27.5vw;
+    width: 25vw;
+    height: 25vh;
 }
 
-/* Gradient card - Marlot brand colors */
-.parallax-gradient {
-    background: linear-gradient(145deg, #c9b8e8 0%, #F25C69 50%, #a8e6cf 100%);
+.parallax-capa[data-capa="5"] .parallax-elemento {
+    top: 27.5vh;
+    left: 5vw;
+    width: 20vw;
+    height: 25vh;
 }
 
-.parallax-gradient .gradient-content {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(145deg, 
-        rgba(201, 184, 232, 0.8) 0%, 
-        rgba(242, 92, 105, 0.6) 40%,
-        rgba(168, 230, 207, 0.8) 100%);
+.parallax-capa[data-capa="6"] .parallax-elemento {
+    top: 27.5vh;
+    left: -22.5vw;
+    width: 30vw;
+    height: 25vh;
+}
+
+.parallax-capa[data-capa="7"] .parallax-elemento {
+    top: 22.5vh;
+    left: 25vw;
+    width: 15vw;
+    height: 15vh;
 }
 
 /* =============================================
@@ -3037,30 +3005,64 @@ section[id] {
         flex-wrap: wrap;
     }
     
-    .parallax-title {
-        font-size: 32px;
-    }
-    
     .blog-cta-title {
         font-size: 28px;
     }
-    
-    .zoom-parallax-container {
+
+    .parallax-seccion {
         height: 200vh;
     }
-    
-    .parallax-center {
-        width: 60vw;
-        height: 30vh;
+
+    .parallax-elemento {
+        width: 40vw;
+        height: 20vh;
+    }
+
+    .parallax-capa[data-capa="1"] .parallax-elemento {
+        width: 52vw;
+        height: 22vh;
+    }
+
+    .parallax-capa[data-capa="2"] .parallax-elemento {
+        top: -25vh;
+        left: 5vw;
+        width: 50vw;
+        height: 20vh;
     }
     
-    [data-position="top-left"] .parallax-image,
-    [data-position="top-right"] .parallax-image,
-    [data-position="bottom-left"] .parallax-image,
-    [data-position="bottom-right"] .parallax-image,
-    [data-position="center-left"] .parallax-image,
-    [data-position="center-right"] .parallax-image {
-        display: none;
+    .parallax-capa[data-capa="3"] .parallax-elemento {
+        top: -15vh;
+        left: -25vw;
+        width: 35vw;
+        height: 30vh;
+    }
+
+    .parallax-capa[data-capa="4"] .parallax-elemento {
+        top: -5vh;
+        left: 25vw;
+        width: 35vw;
+        height: 15vh;
+    }
+
+    .parallax-capa[data-capa="5"] .parallax-elemento {
+        top: 20vh;
+        left: 10vw;
+        width: 40vw;
+        height: 20vh;
+    }
+
+    .parallax-capa[data-capa="6"] .parallax-elemento {
+        top: 25vh;
+        left: -20vw;
+        width: 45vw;
+        height: 15vh;
+    }
+    
+    .parallax-capa[data-capa="7"] .parallax-elemento {
+        top: 30vh;
+        left: 25vw;
+        width: 30vw;
+        height: 15vh;
     }
 }
 
@@ -3630,23 +3632,10 @@ section[id] {
     padding: 80px 40px 56px;
 }
 
-.legal-etiqueta {
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: 18px;
-    padding: 8px 16px;
-    border: 1px solid rgba(242, 92, 105, 0.24);
-    border-radius: 999px;
-    background-color: rgba(242, 92, 105, 0.1);
-    color: var(--color-primary);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-}
-
 .legal-titulo {
+    text-align: center;
     max-width: 780px;
+    margin: 0 auto;
     margin-bottom: 22px;
     font-family: 'Playfair Display', serif;
     font-size: clamp(42px, 7vw, 82px);
@@ -3657,7 +3646,8 @@ section[id] {
 }
 
 .legal-resumen {
-    max-width: 760px;
+    text-align: justify;
+    max-width: 100%;
     margin-bottom: 18px;
     font-size: 18px;
     line-height: 1.7;
@@ -3665,6 +3655,7 @@ section[id] {
 }
 
 .legal-fecha {
+    text-align: center;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1.2px;
@@ -3736,6 +3727,7 @@ section[id] {
 }
 
 .legal-bloque p {
+    text-align: justify;
     margin-bottom: 18px;
     font-size: 17px;
     line-height: 1.8;
@@ -3747,6 +3739,7 @@ section[id] {
 }
 
 .legal-lista {
+    text-align: justify;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -3857,7 +3850,7 @@ section[id] {
     font-family: 'Playfair Display', serif;
     font-size: clamp(28px, 4vw, 40px);
     font-weight: 500;
-    color: var(--color-text-dark);
+    color: var(--color-primary);
 }
 
 .faq-lista {

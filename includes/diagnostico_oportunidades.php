@@ -8,8 +8,8 @@
 ?>
 
 <!-- Sección: Diagnóstico de Oportunidades -->
-<section class="oportunidades" id="nosotros" aria-labelledby="oportunidades_titulo">
-	<div class="oportunidades-contenedor">
+<section class="oportunidades" aria-labelledby="oportunidades_titulo">
+	<div class="oportunidades-contenedor" id="nosotros">
 		<div class="oportunidades-contenido">
 			<p class="oportunidades-etiqueta">DIAGNÓSTICO IA</p>
 			<h2 class="oportunidades-titulo" id="oportunidades_titulo">Encuentra el primer proceso que tu negocio puede automatizar</h2>

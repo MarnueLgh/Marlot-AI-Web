@@ -119,52 +119,6 @@ if (!$articulo_destacado && count($articulos_recientes) > 0) {
 	</div>
 </section>
 
-<!-- Zoom Parallax Gallery Section -->
-<section class="parallax-section">
-	<div class="parallax-intro">
-		<h2 class="parallax-title">Visualiza el futuro</h2>
-		<p class="parallax-subtitle">Explora cómo la IA está transformando industrias</p>
-	</div>
-
-	<div class="zoom-parallax-container" id="zoomParallax">
-		<div class="parallax-sticky">
-			<div class="parallax-image-wrapper" data-scale="4">
-				<div class="parallax-image parallax-center">
-					<img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop" alt="Robot AI" loading="lazy">
-				</div>
-			</div>
-			<div class="parallax-image-wrapper" data-scale="5" data-position="top-left">
-				<div class="parallax-image parallax-gradient"><div class="gradient-content"></div></div>
-			</div>
-			<div class="parallax-image-wrapper" data-scale="5.5" data-position="top-right">
-				<div class="parallax-image">
-					<img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=500&fit=crop" alt="City business" loading="lazy">
-				</div>
-			</div>
-			<div class="parallax-image-wrapper" data-scale="4.5" data-position="center-left">
-				<div class="parallax-image">
-					<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop" alt="Modern architecture" loading="lazy">
-				</div>
-			</div>
-			<div class="parallax-image-wrapper" data-scale="6" data-position="center-right">
-				<div class="parallax-image">
-					<img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop" alt="Mountains" loading="lazy">
-				</div>
-			</div>
-			<div class="parallax-image-wrapper" data-scale="5" data-position="bottom-left">
-				<div class="parallax-image">
-					<img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=600&h=400&fit=crop" alt="Lake dock" loading="lazy">
-				</div>
-			</div>
-			<div class="parallax-image-wrapper" data-scale="7" data-position="bottom-right">
-				<div class="parallax-image">
-					<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop" alt="Forest" loading="lazy">
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
 <?php
 require_once __DIR__ . '/includes/vite.php';
 echo vite_tags('src/js/blog.js');

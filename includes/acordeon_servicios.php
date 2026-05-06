@@ -9,8 +9,8 @@
 ?>
 
 <!-- ── Sección: Servicios ──────────────────────────────── -->
-<section class="servicios" id="servicios">
-	<div class="container">
+<section class="servicios">
+	<div class="container" id="servicios">
 		<div class="servicios-contenedor" id="servicios_contenedor">
 
 			<!-- Item 1: Agentes de atención -->

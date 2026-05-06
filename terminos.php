@@ -20,7 +20,6 @@ require __DIR__ . '/includes/nav.php';
 
 <main class="legal-pagina">
 	<section class="legal-hero">
-		<span class="legal-etiqueta">Documento legal</span>
 		<h1 class="legal-titulo">Términos y Condiciones</h1>
 		<p class="legal-resumen">Estos términos regulan el acceso al sitio web de Marlot AI y la contratación de nuestros servicios de inteligencia artificial para empresas.</p>
 		<p class="legal-fecha">Última actualización: mayo de 2025</p>

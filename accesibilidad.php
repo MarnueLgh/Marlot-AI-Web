@@ -20,7 +20,6 @@ require __DIR__ . '/includes/nav.php';
 
 <main class="legal-pagina">
 	<section class="legal-hero">
-		<span class="legal-etiqueta">Compromiso digital</span>
 		<h1 class="legal-titulo">Política de Accesibilidad</h1>
 		<p class="legal-resumen">Trabajamos para que el acceso a la tecnología y la información de Marlot AI sea claro, usable y compatible con distintas capacidades y dispositivos.</p>
 		<p class="legal-fecha">Última actualización: mayo de 2025</p>

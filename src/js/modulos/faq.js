@@ -1,7 +1,7 @@
 /*
  * Autor: MarnueLgh
- * Fecha: 03/05/2026
- * Version: 1.0
+ * Fecha: 05/05/2026
+ * Version: 1.1
  * Descripcion: Acordeon accesible para la pagina de preguntas frecuentes.
  */
 
@@ -17,7 +17,14 @@ export function iniciar_faq() {
 
 		boton.addEventListener('click', function () {
 			const esta_abierto = boton.getAttribute('aria-expanded') === 'true';
-			alternar_respuesta(boton, respuesta, !esta_abierto);
+
+			if (esta_abierto) {
+				alternar_respuesta(boton, respuesta, false);
+				return;
+			}
+
+			cerrar_respuestas_faq(botones_faq, boton);
+			alternar_respuesta(boton, respuesta, true);
 		});
 	});
 
@@ -28,6 +35,17 @@ export function iniciar_faq() {
 				respuesta.style.maxHeight = `${respuesta.scrollHeight}px`;
 			}
 		});
+	});
+}
+
+function cerrar_respuestas_faq(botones_faq, boton_actual) {
+	botones_faq.forEach(function (boton) {
+		if (boton === boton_actual) return;
+
+		const respuesta = document.getElementById(boton.getAttribute('aria-controls'));
+		if (!respuesta) return;
+
+		alternar_respuesta(boton, respuesta, false);
 	});
 }
 

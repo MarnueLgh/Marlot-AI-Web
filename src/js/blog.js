@@ -1,8 +1,8 @@
 /*
  * Autor: MarnueLgh
  * Fecha: 02/05/2026
- * Version: 2.0
- * Descripción: Entry point del blog — zoom parallax con GSAP, filtros animados y scroll
+ * Version: 2.1
+ * Descripcion: Entry point del blog con parallax modular, filtros animados y scroll
  */
 
 import { gsap, ScrollTrigger } from './modulos/lenis_init.js';
@@ -13,31 +13,9 @@ import { gsap, ScrollTrigger } from './modulos/lenis_init.js';
 document.addEventListener('DOMContentLoaded', function () {
 
 	// =============================================
-	// Zoom Parallax Effect con GSAP ScrollTrigger
+	// Parallax modular con GSAP ScrollTrigger
 	// =============================================
-	const contenedor_parallax = document.getElementById('zoomParallax');
-
-	if (contenedor_parallax) {
-		const wrappers_parallax = contenedor_parallax.querySelectorAll('.parallax-image-wrapper');
-
-		wrappers_parallax.forEach((wrapper) => {
-			const escala_max = parseFloat(wrapper.dataset.scale) || 4;
-
-			gsap.fromTo(wrapper,
-				{ scale: escala_max },
-				{
-					scale: 1,
-					ease: 'none',
-					scrollTrigger: {
-						trigger: contenedor_parallax,
-						start: 'top bottom',
-						end: 'bottom top',
-						scrub: 1.5,
-					},
-				}
-			);
-		});
-	}
+	iniciar_parallax_blog();
 
 	// =============================================
 	// Blog Filter con GSAP
@@ -97,24 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 
 	// =============================================
-	// Blog Hero CTA Scroll
-	// =============================================
-	const cta_blog = document.querySelector('.blog-hero-cta');
-	if (cta_blog) {
-		cta_blog.addEventListener('click', function (e) {
-			e.preventDefault();
-			const destino = document.querySelector(this.getAttribute('href'));
-			if (destino) {
-				gsap.to(window, {
-					scrollTo: { y: destino, offsetY: 0 },
-					duration: 1,
-					ease: 'power2.inOut',
-				});
-			}
-		});
-	}
-
-	// =============================================
 	// Load More Placeholder
 	// =============================================
 	const boton_cargar_mas = document.querySelector('.load-more-btn');
@@ -131,13 +91,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+function iniciar_parallax_blog() {
+	const contenedor_parallax = document.getElementById('contenedor-parallax');
+	if (!contenedor_parallax) return;
+
+	const capas_parallax = contenedor_parallax.querySelectorAll('.parallax-capa');
+	const escalas_iniciales = [4, 5, 6, 5, 6, 8, 9];
+
+	capas_parallax.forEach((capa, indice) => {
+		const escala_inicio = escalas_iniciales[indice % escalas_iniciales.length];
+
+		gsap.fromTo(capa,
+			{
+				scale: escala_inicio,
+			},
+			{
+				scale: 1,
+				ease: 'none',
+				force3D: true,
+				scrollTrigger: {
+					trigger: contenedor_parallax,
+					start: 'top top',
+					end: 'bottom bottom',
+					scrub: 1,
+				},
+			}
+		);
+	});
+}
+
 /* =============================================
    Restauracion desde bfcache (boton atras/adelante)
    ============================================= */
 window.addEventListener('pageshow', function (evento) {
 	if (evento.persisted) {
 		/* Limpiar estilos inline de GSAP en elementos del blog */
-		const selectores_blog = '.blog-card, .parallax-image-wrapper';
+		const selectores_blog = '.blog-card, .parallax-capa';
 		document.querySelectorAll(selectores_blog).forEach(function (el) {
 			el.style.removeProperty('visibility');
 			el.style.removeProperty('opacity');
