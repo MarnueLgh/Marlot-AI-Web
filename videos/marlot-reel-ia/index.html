@@ -1,0 +1,218 @@
+<!doctype html>
+<!--
+ * Autor: MarnueLgh
+ * Fecha: 06/05/2026
+ * Version: 1.0
+ * Descripcion: Composicion vertical HyperFrames para reel OpenAI-like de Marlot AI.
+ -->
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=1080, height=1920">
+		<title>Marlot AI - Reel diagnostico IA</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="styles.css">
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+	</head>
+	<body>
+		<main
+			id="marlot_reel_ia"
+			data-composition-id="marlot-reel-ia"
+			data-start="0"
+			data-duration="36"
+			data-width="1080"
+			data-height="1920"
+			aria-label="Reel vertical de Marlot AI"
+		>
+			<section id="escena_intro" class="clip escena-contenido intro-contenido" data-start="0" data-duration="4.5" data-track-index="1" data-layout-allow-overflow>
+				<p id="intro_marca" class="intro-marca">Marlot AI</p>
+				<h1 class="intro-titulo">
+					<span>Tu negocio no necesita más horas.</span>
+					<span>Necesita menos trabajo repetido.</span>
+				</h1>
+				<div id="intro_linea" class="intro-linea">
+					<span></span>
+				</div>
+				<div id="cursor_intro" class="cursor-icono" aria-hidden="true" data-layout-ignore>
+					<svg viewBox="0 0 92 112" role="img">
+						<path d="M10 8L82 62L48 67L31 103L10 8Z" fill="#101010"/>
+						<path d="M48 67L82 62L60 78L48 67Z" fill="#F25C69"/>
+					</svg>
+				</div>
+			</section>
+
+			<section id="escena_dolor" class="clip escena-contenido dolor-contenido" data-start="4.5" data-duration="6" data-track-index="1" data-layout-allow-overflow>
+				<div class="escena-cabecera">
+					<p class="escena-etiqueta">Operación diaria</p>
+					<h2 class="escena-titulo">Si esto pasa diario, ya hay una automatización esperando.</h2>
+				</div>
+				<div class="producto-panel dolor-panel">
+					<div class="panel-barra">
+						<span></span>
+						<span></span>
+						<span></span>
+						<strong>señales</strong>
+					</div>
+					<ul class="dolor-lista" aria-label="Señales de procesos repetitivos">
+						<li class="dolor-item">
+							<span class="dolor-check"></span>
+							<p>Preguntas repetidas</p>
+						</li>
+						<li class="dolor-item">
+							<span class="dolor-check"></span>
+							<p>seguimientos que se enfrían</p>
+						</li>
+						<li class="dolor-item">
+							<span class="dolor-check"></span>
+							<p>datos perdidos entre chats</p>
+						</li>
+						<li class="dolor-item">
+							<span class="dolor-check"></span>
+							<p>contenido que se atrasa</p>
+						</li>
+						<li class="dolor-item">
+							<span class="dolor-check"></span>
+							<p>tareas que no venden</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section id="escena_diagnostico" class="clip escena-contenido diagnostico-contenido" data-start="10.5" data-duration="6.5" data-track-index="1" data-layout-allow-overflow>
+				<div class="escena-cabecera">
+					<p class="escena-etiqueta">Diagnóstico IA</p>
+					<h2 class="escena-titulo">Encuentra el cuello de botella que más tiempo te cuesta.</h2>
+				</div>
+				<div class="producto-panel diagnostico-panel">
+					<div class="panel-barra">
+						<span></span>
+						<span></span>
+						<span></span>
+						<strong>Marlot AI</strong>
+					</div>
+					<div class="diagnostico-superior">
+						<div class="diagnostico-contador">
+							<span id="diagnostico_contador">0/5</span>
+							<p>señales detectadas</p>
+						</div>
+						<div class="diagnostico-estado">
+							<span></span>
+							<p>prioridad en proceso</p>
+						</div>
+					</div>
+					<div class="diagnostico-prompt">
+						<p class="diagnostico-label">prompt</p>
+						<p id="diagnostico_type" class="diagnostico-type" data-texto-completo="Analiza dónde se pierde más tiempo cada semana."></p>
+					</div>
+					<div class="diagnostico-resultado">
+						<p>Resultado</p>
+						<strong>3 señales detectadas. Prioridad clara: atención y seguimiento.</strong>
+					</div>
+				</div>
+			</section>
+
+			<section id="escena_soluciones" class="clip escena-contenido soluciones-contenido" data-start="17" data-duration="8" data-track-index="1" data-layout-allow-overflow>
+				<div class="escena-cabecera">
+					<p class="escena-etiqueta">Soluciones Marlot</p>
+					<h2 class="escena-titulo">Un sistema pequeño para avanzar sin fricción.</h2>
+				</div>
+				<div class="producto-panel soluciones-panel">
+					<div class="panel-barra">
+						<span></span>
+						<span></span>
+						<span></span>
+						<strong>acciones</strong>
+					</div>
+					<div class="soluciones-lista">
+						<article class="solucion-item">
+							<span class="solucion-numero">01</span>
+							<h3>Responde</h3>
+							<p>Agentes para mensajes frecuentes en WhatsApp, web y redes.</p>
+						</article>
+						<article class="solucion-item">
+							<span class="solucion-numero">02</span>
+							<h3>Ordena</h3>
+							<p>Datos de clientes y conversaciones en un flujo claro.</p>
+						</article>
+						<article class="solucion-item">
+							<span class="solucion-numero">03</span>
+							<h3>Publica</h3>
+							<p>Ideas, copys y campañas listas para salir a tiempo.</p>
+						</article>
+						<article class="solucion-item">
+							<span class="solucion-numero">04</span>
+							<h3>Da seguimiento</h3>
+							<p>Recordatorios y tareas administrativas sin depender de memoria.</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section id="escena_flujo" class="clip escena-contenido flujo-contenido" data-start="25" data-duration="6.5" data-track-index="1" data-layout-allow-overflow>
+				<div class="escena-cabecera">
+					<p class="escena-etiqueta">Flujo automatizado</p>
+					<h2 class="escena-titulo">WhatsApp + CRM + correo + hojas.</h2>
+				</div>
+				<div class="producto-panel flujo-panel">
+					<div class="panel-barra">
+						<span></span>
+						<span></span>
+						<span></span>
+						<strong>un flujo</strong>
+					</div>
+					<div class="flujo-campo">
+						<p>Entrada</p>
+						<strong>Nuevo mensaje de prospecto</strong>
+					</div>
+					<div class="flujo-ruta">
+						<span>WhatsApp</span>
+						<span>CRM</span>
+						<span>correo</span>
+						<span>hojas</span>
+					</div>
+					<div class="flujo-salida">
+						<span></span>
+						<p>un flujo, no otro sistema</p>
+					</div>
+				</div>
+				<div class="flujo-lista">
+					<span>&lt; 1s</span>
+					<span>datos centralizados</span>
+					<span>seguimiento automático</span>
+					<span>copys listos</span>
+				</div>
+			</section>
+
+			<section id="escena_cierre" class="clip escena-contenido cierre-contenido" data-start="31.5" data-duration="4.5" data-track-index="1" data-layout-allow-overflow>
+				<img id="cierre_logo" class="cierre-logo" src="assets/images/logo-marlot.svg" alt="Marlot AI">
+				<h2 class="cierre-titulo">Recupera tiempo antes de contratar más.</h2>
+				<p class="cierre-texto">Empieza por el proceso que más se repite.</p>
+				<a class="cierre-boton" href="#" aria-label="Solicitar diagnóstico IA">Solicitar diagnóstico IA</a>
+			</section>
+
+			<div id="transicion_1" class="clip transicion-capa" data-start="4.25" data-duration="0.65" data-track-index="2" data-layout-ignore>
+				<span class="transicion-panel"></span>
+			</div>
+			<div id="transicion_2" class="clip transicion-capa" data-start="10.25" data-duration="0.65" data-track-index="2" data-layout-ignore>
+				<span class="transicion-panel"></span>
+			</div>
+			<div id="transicion_3" class="clip transicion-capa" data-start="16.75" data-duration="0.65" data-track-index="2" data-layout-ignore>
+				<span class="transicion-panel"></span>
+			</div>
+			<div id="transicion_4" class="clip transicion-capa" data-start="24.75" data-duration="0.65" data-track-index="2" data-layout-ignore>
+				<span class="transicion-panel"></span>
+			</div>
+			<div id="transicion_5" class="clip transicion-capa" data-start="31.2" data-duration="0.65" data-track-index="2" data-layout-ignore>
+				<span class="transicion-panel"></span>
+			</div>
+		</main>
+
+		<script src="animacion.js"></script>
+		<script>
+			window.__timelines = window.__timelines || {};
+			window.__timelines["marlot-reel-ia"] = window.__timeline_marlot_reel_ia || window.__timelines["marlot-reel-ia"];
+		</script>
+	</body>
+</html>

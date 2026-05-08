@@ -11,7 +11,6 @@
 <section class="oportunidades" aria-labelledby="oportunidades_titulo">
 	<div class="oportunidades-contenedor" id="nosotros">
 		<div class="oportunidades-contenido">
-			<p class="oportunidades-etiqueta">DIAGNÓSTICO IA</p>
 			<h2 class="oportunidades-titulo" id="oportunidades_titulo">Encuentra el primer proceso que tu negocio puede automatizar</h2>
 			<p class="oportunidades-descripcion">Marca las señales que ya pasan en tu operación. Si aparecen dos o más, hay una oportunidad clara para implementar IA sin cambiar todo tu sistema.</p>
 			<a href="#contacto" class="oportunidades-btn">SOLICITAR DIAGNÓSTICO</a>

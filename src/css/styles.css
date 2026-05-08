@@ -20,8 +20,8 @@
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     
     --transition-fast: 0.2s ease;
-    --transition-medium: 0.3s ease;
-    --transition-slow: 0.5s ease;
+    --transition-medium: 0.5s ease;
+    --transition-slow: 0.7s ease;
 }
 
 /* Reset & Base */
@@ -81,7 +81,7 @@ ul {
     -webkit-backdrop-filter: blur(10px);
     padding: 16px 40px;
     z-index: 1000;
-    transition: all var(--transition-medium);
+    transition: all var(--transition-slow);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
