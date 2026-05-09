@@ -57,7 +57,7 @@ if (!isset($articulo)) {
 		
 		<!-- Author -->
 		<div class="article-author-block">
-			<img src="<?php echo htmlspecialchars($articulo['autor']['imagen']); ?>" alt="<?php echo htmlspecialchars($articulo['autor']['nombre']); ?>" class="article-author-avatar" width="60" height="60" loading="lazy" decoding="async">
+			<img src="assets/images/editores/<?php echo htmlspecialchars($articulo['autor']['imagen']); ?>" alt="<?php echo htmlspecialchars($articulo['autor']['nombre']); ?>" class="article-author-avatar" width="60" height="60" loading="lazy" decoding="async">
 			<div class="article-author-info">
 				<h4><?php echo htmlspecialchars($articulo['autor']['nombre']); ?></h4>
 				<p><?php echo htmlspecialchars($articulo['autor']['descripcion']); ?></p>

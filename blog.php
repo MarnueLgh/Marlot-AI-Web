@@ -33,6 +33,28 @@ if (!$articulo_destacado && count($articulos_recientes) > 0) {
 	$articulo_destacado = $articulos_recientes[0];
 	$demas_articulos = array_slice($articulos_recientes, 1);
 }
+
+// src_local queda preparado para activar imagenes propias cuando existan en el proyecto.
+$imagenes_float_card = [
+	[
+		'clase' => 'float-card-1',
+		'src_remoto' => 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=500&fit=crop&crop=entropy&auto=format&q=80',
+		'src_local' => 'public/assets/images/blog/float-cards/ia.webp',
+		'alt' => 'Concepto visual de inteligencia artificial',
+	],
+	[
+		'clase' => 'float-card-2',
+		'src_remoto' => 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=500&fit=crop&crop=entropy&auto=format&q=80',
+		'src_local' => 'public/assets/images/blog/float-cards/analitica.webp',
+		'alt' => 'Analitica de datos empresariales',
+	],
+	[
+		'clase' => 'float-card-3',
+		'src_remoto' => 'https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=500&h=500&fit=crop&crop=entropy&auto=format&q=80',
+		'src_local' => 'public/assets/images/blog/float-cards/automatizacion.webp',
+		'alt' => 'Automatizacion con tecnologia robotica',
+	],
+];
 ?>
 
 <!-- Blog Hero Section -->
@@ -50,9 +72,18 @@ if (!$articulo_destacado && count($articulos_recientes) > 0) {
 	</div>
 	<div class="blog-hero-visual">
 		<div class="floating-cards">
-			<div class="float-card float-card-1"><span class="float-icon">🤖</span></div>
-			<div class="float-card float-card-2"><span class="float-icon">📊</span></div>
-			<div class="float-card float-card-3"><span class="float-icon">⚡</span></div>
+			<?php foreach ($imagenes_float_card as $imagen_float_card): ?>
+			<div class="float-card <?php echo htmlspecialchars($imagen_float_card['clase'], ENT_QUOTES, 'UTF-8'); ?>">
+				<img
+					src="<?php echo htmlspecialchars($imagen_float_card['src_remoto'], ENT_QUOTES, 'UTF-8'); ?>"
+					data-src-local="<?php echo htmlspecialchars($imagen_float_card['src_local'], ENT_QUOTES, 'UTF-8'); ?>"
+					alt="<?php echo htmlspecialchars($imagen_float_card['alt'], ENT_QUOTES, 'UTF-8'); ?>"
+					class="float-imagen"
+					loading="lazy"
+					decoding="async"
+				>
+			</div>
+			<?php endforeach; ?>
 		</div>
 	</div>
 </section>

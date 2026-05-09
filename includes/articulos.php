@@ -55,9 +55,9 @@ $articulos = [
 					
 					<p>El desafio principal de hoy no es el acceso a la tecnología, sino el diseño inteligente de flujos de trabajo en donde la IA potencie el talento humano existente. En <strong>marlot</strong>, creemos que pronto habrá dos tipos de negocios: aquellos que integraron IA en sus operaciones, y aquellos que se volvieron irrelevantes. De que lado estarás?</p>',
 		'autor' => [
-			'nombre' => 'Equipo Editorial Marlot',
-			'descripcion' => 'Especialistas en transformación digital y adopción de IA para PyMEs.',
-			'imagen' => 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop'
+			'nombre' => 'Cleo Hartmann',
+			'descripcion' => 'Editora del Equipo Marlot AI',
+			'imagen' => 'CleoHartmann.png'
 		]
 	],
 
@@ -101,9 +101,9 @@ $articulos = [
 					<h2>El siguiente paso</h2>
 					<p>Empieza pequeno. Escoge el punto numero 1 o 2 de esta lista e invierte unas horas en configurarlo. Cuando veas ese primer proceso funcionar solo por primera vez como por arte de magia, entenderas por qué la automatización es el pilar de las empresas modernas.</p>',
 		'autor' => [
-			'nombre' => 'Equipo Editorial Marlot',
-			'descripcion' => 'Especialistas en transformación digital.',
-			'imagen' => 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop'
+			'nombre' => 'Cleo Hartmann',
+			'descripcion' => 'Editora del Equipo Marlot AI',
+			'imagen' => 'CleoHartmann.png'
 		]
 	],
 
@@ -161,9 +161,9 @@ $articulos = [
 					<h2>Conclusión</h2>
 					<p>La tecnología ha avanzado tan velozmente que sugerimos saltarnos completamente la era de los bots rígidos de opciones numericas. Invertir en una solución de IA generativa capacitada exclusivamente sobre los datos de tu negocio (Knowledge Base) ofrece un retorno de inversión en servicio al cliente sin precedentes.</p>',
 		'autor' => [
-			'nombre' => 'Equipo Editorial Marlot',
-			'descripcion' => 'Especialistas en la integración de flujos conversacionales.',
-			'imagen' => 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop'
+			'nombre' => 'Cleo Hartmann',
+			'descripcion' => 'Editora del Equipo Marlot AI',
+			'imagen' => 'CleoHartmann.png'
 		]
 	],
 
@@ -204,9 +204,9 @@ $articulos = [
 					<h2>Por qué debería importarle a tu empresa</h2>
 					<p>Con los motores modernos de Machine Learning como servicio de AWS o Google Cloud, no necesitas un equipo de Ph.D. para empezar a usar esta tecnología. Herramientas ya integradas en CRMs modernos útilizan ML para puntuar qué clientes (leads) tienen más probabilidad de cierre, prediciendo qué producto recomendarles a continuacion mediante un sistema de recomendacion estilo Netflix.</p>',
 		'autor' => [
-			'nombre' => 'Equipo Editorial Marlot',
-			'descripcion' => 'Divulgación tecnológica accesible.',
-			'imagen' => 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop'
+			'nombre' => 'Cleo Hartmann',
+			'descripcion' => 'Editora del Equipo Marlot AI',
+			'imagen' => 'CleoHartmann.png'
 		]
 	],
 
@@ -249,9 +249,9 @@ $articulos = [
 					
 					<p>La automatización en empresas de este tamaño no desplaza el trabajo humano, sino que elimina el "trabajo robotico" que los humanos estaban obligados a hacer, elevando el potencial creativo y estratégico del equipo.</p>',
 		'autor' => [
-			'nombre' => 'Equipo Editorial Marlot',
-			'descripcion' => 'Casos de estudio.',
-			'imagen' => 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop'
+			'nombre' => 'Cleo Hartmann',
+			'descripcion' => 'Editora del Equipo Marlot AI',
+			'imagen' => 'CleoHartmann.png'
 		]
 	],
 
@@ -289,9 +289,9 @@ $articulos = [
 					
 					<p>Adelantarse a la curva no significa correr a ciegas. Tomate el tiempo para realizar una auditoria honesta hoy mismo. El paso de tortuga estratégica siempre vencera a la liebre desorganizada en la maratón corporativa.</p>',
 		'autor' => [
-			'nombre' => 'Equipo Editorial Marlot',
-			'descripcion' => 'Gestión del Cambio y Estrategia de IA.',
-			'imagen' => 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop'
+			'nombre' => 'Cleo Hartmann',
+			'descripcion' => 'Editora del Equipo Marlot AI',
+			'imagen' => 'CleoHartmann.png'
 		]
 	]
 ];
