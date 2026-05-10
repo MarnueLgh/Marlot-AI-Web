@@ -37,6 +37,9 @@ require __DIR__ . '/includes/nav.php';
 <!-- Sección: Servicios -->
 <?php include('includes/acordeon_servicios.php'); ?>
 
+<!-- Seccion: Secuencia iPhone -->
+<?php include('includes/secuencia_iphone.php'); ?>
+
 <!-- Sección: Diagnóstico de Oportunidades -->
 <?php include('includes/diagnostico_oportunidades.php'); ?>
 

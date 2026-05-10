@@ -36,6 +36,7 @@ import {
 } from './modulos/navegacion.js';
 import { iniciar_acordeon_metricas } from './modulos/acordeon_metricas.js';
 import { iniciar_diagnostico_oportunidades } from './modulos/diagnostico_oportunidades.js';
+import { iniciar_secuencia_iphone } from './modulos/secuencia_iphone.js';
 import { iniciar_cookies } from './modulos/cookies.js';
 import { iniciar_faq } from './modulos/faq.js';
 
@@ -66,6 +67,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	/* --- Acordeon de metricas --- */
 	iniciar_acordeon_metricas();
+
+	/* --- Secuencia visual de iPhone --- */
+	iniciar_secuencia_iphone();
 
 	/* --- Diagnostico de oportunidades IA --- */
 	iniciar_diagnostico_oportunidades();
